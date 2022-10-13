@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+<!-- <style>
+  table {
+    width: 100%;
+    border-collapse: collapse;
+  }
+  td,th {
+    border: 1px solid red;
+    text-align: center;
+  }
+  tr:nth-child(even) {
+    background: yellow;
+  }
+</style>
+<table>
+  <thead>
+    <tr>
+      <th>姓名even</th><th>年纪</th><th>性别</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>小明</td><td>3</td><td>男</td>
+    </tr>
+    <tr>
+      <td>小明</td><td>3</td><td>男</td>
+    </tr>
+  </tbody>
+</table> -->
+
+<!-- <style>
+  .hero {
+    height: 120px;
+    /* background: lightpink url(static/flamingo.png) center center no-repeat;  */
+    background: url(static/flamingo.png) center center no-repeat, url(static/griaffe.png) 10px center no-repeat;
+    background-color: lightcyan;
+    background-size: contain; /* cover */
+  }
+</style>
+<div class="hero"></div> -->
+
+
+<!-- <style>
+  .hero {
+    background: linear-gradient(blue, pink);
+    background: linear-gradient(to right, blue, pink);
+    background: linear-gradient(to bottom right, blue, pink);
+    background: linear-gradient(45deg, blue, pink);
+    background: linear-gradient(red, yellow, blue, orange);
+    
+    /* px是色的宽度，百分比是色的位置*/
+    background: linear-gradient(to right, pink 30px, red 50%, blue);
+    
+    /*实线色带*/
+    background: linear-gradient(to right, cyan 50%, red 50%);
+
+    /*条纹*/
+    background: linear-gradient(to  bottom right, cyan 33%, red 33% 66%, pink 66%); 
+    
+    /*设置渐变中心点*/
+    background: linear-gradient(to right, blue, 10%, pink); 
+
+    /*多色*/
+    background:
+      linear-gradient(217deg, rgba(255,0,0,.8), rgba(255,0,0,0) 70.71%),
+      linear-gradient(127deg, rgba(0,255,0,.8), rgba(0,255,0,0) 70.71%),
+      linear-gradient(336deg, rgba(0,0,255,.8), rgba(0,0,255,0) 70.71%);
+    
+    background: radial-gradient(red, blue);
+    background: radial-gradient(red 10px, yellow 30%, #1e90ff 50%);
+    background: radial-gradient(red 20px, yellow 20px 40px, #1e90ff 40px);
+    background: radial-gradient(at 0% 0%, red 10px, yellow 50%, #1e90ff 70%);
+    width: 100px;
+    height: 100px;
+    border-radius: 50px;
+  }
+  .line30{
+    width: 30px;
+    height: 2px;
+    background: pink;
+    margin-top: 10px;
+  }
+  .line50{
+    width: 50px;
+    height: 2px;
+    background: red;
+    margin-top: 10px;
+  }
+</style>
+<div class="hero"></div>
+<div class="line30"></div>
+<div class="line50"></div> -->
+
+
+<!-- <style>
+  .box {
+    /* x 偏移量 | y 偏移量 | 阴影模糊半径 | 阴影扩散半径 | 阴影颜色 */
+    box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.2);
+    border: 1px solid #ccc;
+    padding: 10px;
+  }
+</style>
+<div class="box">jirengu.com</div> -->
+
+<!-- <style>
+  body {
+    line-height: 1.4;
+    font: 14px/1.4 Arial;
+  }
+</style> -->
+
+<!-- <style>
+  .box {
+    height: 100px;
+    border: 1px solid #ccc;
+    overflow: hidden;
+    /* overflow: scroll; */
+    /* overflow: auto; */
+    /* overflow: visible; */
+    /* overflow-x: auto; */
+    /* overflow-y: scroll; */
+  }
+</style>
+<div class="box">
+  <p>项目1</p>
+</div> -->
+
+<style>
+  .box {
+    /*从普通流中移除，不占据位置*/
+    display: none;
+    /*在普通流中，透明度可调节，占据位置*/
+    opacity: 0;
+    /*在普通流中，看不见，但占据位置*/
+    visibility: hidden;
+  }
+  .box:hover {
+    transition: opacity 0.3s;
+  }
+</style>
+<div class="box">jirengu.com</div>
+</body>
+
+</html>

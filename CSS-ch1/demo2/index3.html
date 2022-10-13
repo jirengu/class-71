@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    body {
+      margin: 0;
+      border: 1px solid red;
+    }
+
+    a {
+      text-decoration: none;
+      color: #999;
+    }
+
+    #header {
+      color: red;
+    }
+  </style>
+</head>
+<body>
+  <div>hello world</div>
+
+  <style>
+    a:hover {
+      color: red;
+      transition: color .3s;
+    }
+  </style>
+  <a href="#">饥人谷</a>
+  <a href="#">前端</a>
+
+  <section>
+    <style>
+      input:focus {
+        /* border: 1px solid red; */
+        outline: 2px solid blue; 
+      }
+    </style>
+    <input type="text" placeholder="邮箱">
+    <input type="text" placeholder="手机号">
+  </section>
+
+
+  <div id="header">red</div>
+
+  <style>
+    .item {
+      color: red;
+    }
+  </style>
+  <ul>
+    <li class="item">1</li>
+    <li class="item">2</li>
+    <li>3</li>
+  </ul>
+
+  <section>
+    <style>
+      .icon-check::before {
+        content: '✅ ';
+      }
+    </style>
+    <span class="icon-check">你好</span>
+    <div class="icon-check">hellos</div>
+  </section>
+
+  <section>
+    <style>
+      .menu>.item {
+        border: 1px solid black;
+      }
+    </style>
+    <div class="item">ccc</div>
+    <ul class="menu">
+      <li>dd
+        <ul>
+          <li class="item">aaa</li>
+        </ul>
+      </li>
+      <li class="item">bbb</li>
+    </ul>
+  </section>
+
+  <section>
+    <style>
+      .active + li {
+        color: blue;
+        border: 1px solid red;
+      }
+      </style>
+    <ul>
+      <li class="active">111</li>
+      <li>222
+        <p>jirengu</p>
+      </li>
+      <li>333 <span>hello</span></li>
+    </ul>
+
+  </section>
+
+  <section>
+    <style>
+      [class="content"] {
+        color: red;
+      }
+      .content {
+        color: blue;
+      }
+    </style>
+    <div class="content">box</div>
+    <button>button</button>
+  </section>
+</body>
+</html>

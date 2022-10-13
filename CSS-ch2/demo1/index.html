@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>选择器优先级</title>
+</head>
+<body>
+
+<!-- <style>
+  p {
+    color: yellow
+  }
+
+  #app p {
+    color: red;
+  }
+
+  .header .user {
+    color: blue;
+  }
+</style>
+<div id="app">
+  <div class="header">
+    <p class="user">饥人谷</p>
+  </div>
+</div> -->
+
+<!-- <style>
+  p {
+    color: red!important;
+  }
+
+  .box p {
+    color: blue;
+  }
+</style>
+<div class="box">
+  <p  style="color: yellow;">饥人谷</p>
+</div> -->
+
+<!-- <style>
+  .box  {
+    color: red!important;
+  }
+ </style>
+<div class="box">
+  <a href="#">饥人谷</a>
+</div> -->
+
+<!-- <style>
+  #detail span {  /*101*/    
+   color: red; 
+  } 
+  #detail.box > span.title {  /*121*/
+   color: blue; 
+  } 
+  .box span:hover {  /*021*/
+   color: yellow; 
+  }   
+  #detail span#title { /*201*/
+   color: pink;
+  }   
+</style>
+<p id="detail" class="box"> 
+  <span class="title" id="title" >饥人谷</span>
+</p> -->
+
+<!-- <style>
+  #detail.box {  /*101 ?*/    
+   color: red; 
+  } 
+  span.title  {  /*011 ?*/
+    color: blue;
+  }
+</style>
+<p id="detail" class="box"> 
+  <span class="title" id="title" >饥人谷</span>
+</p> -->
+
+<!-- <style>
+  body {
+    font: 12px/1.5 tahoma, arial, sans-serif;
+  }
+</style> -->
+
+<!-- <style>
+@font-face {
+  font-family: "jirengu";
+  src: url("https://mdn.mozillademos.org/files/2468/VeraSeBd.ttf");
+}
+    
+body { font-family: jirengu, serif }
+
+p {
+  font-style: normal; /*正常*/
+  font-style: italic; /*斜体*/
+}
+
+p {
+  font-weight: bold;
+  font-weight: normal;
+  font-weight: 100;
+  font-weight: 400;
+  font-weight: 900;
+}
+
+p {
+  text-align: left; /*左对齐*/
+  text-align: center; /*居中对齐*/
+  text-align: right; /*右对齐*/
+  text-align: justify; /*两侧对齐，对最后一行无效*/
+} -->
+
+</style>
+
+<!-- <style>
+  .wrap {
+    font-size: 20px;
+  }
+  .wrap .inner-1 {
+    font-size: 2em;
+    text-indent: 2em;
+  }
+  .wrap .inner-2 {
+    font-size: 2rem;
+    text-indent: 2rem;
+  }
+</style>
+<div class="wrap">
+  <div class="inner-1">2em</div>
+  <div class="inner-2">2rem</div>
+</div> -->
+
+<!-- <style>
+  a { text-decoration: none; }
+  .a { text-decoration: underline; }
+  .b { text-decoration: line-through; }
+  .c { text-decoration: overline; }
+  .d { text-decoration: green wavy underline; }
+</style>
+<a href='#'>饥人谷</a>
+<div class='a'>饥人谷a</div>
+<div class='b'>饥人谷b</div>
+<div class='c'>饥人谷c</div>
+<div class="d">饥人谷d</div> -->
+
+<!-- <style>
+  h1 {
+    width: 200px;
+    white-space: nowrap;  /* 文字遇边界不折行，1行展示 */
+    overflow: hidden;     /* 超出边界隐藏 */
+    text-overflow: ellipsis;  /* 文本溢出时...展示 */  
+  }
+</style>
+<h1>hello world, hello world, hello world</h1> -->
+
+
+
+<style>
+  h1 {
+    width: 200px;
+    overflow: hidden;     
+    display: -webkit-box;
+    -webkit-line-clamp: 2; 
+    -webkit-box-orient: vertical;
+  }
+</style>
+<h1>hello world, hello world, hello world</h1>
+
+
+
+</body>
+</html>

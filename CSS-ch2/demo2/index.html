@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CSS</title>
+</head>
+<body>
+  <!-- <style>
+    body {
+      color: pink;
+    }
+    p {
+      color: red!important;
+    }
+    
+    .box p {
+      color: blue;
+    }
+  </style>
+  <div class="box">
+    <p  style="color: yellow;">饥人谷</p>
+  </div> -->
+
+
+  <!-- <style>
+    .box {
+      color: red!important;
+    }
+    
+    .box p {
+      color: blue;
+    }
+  </style>
+  <div class="box">
+    hello
+    <p  style="color: pink;">饥人谷</p>
+  </div> -->
+
+  <!-- <style>
+    .box  {
+      color: red!important;
+    }
+  </style>
+  <div class="box">
+    <a href="#">饥人谷</a>
+  </div> -->
+
+  <!-- <style>
+    /*101*/  
+    #detail span {    
+     color: red; 
+    } 
+
+    /*121*/
+    #detail.box > span.title {  
+     color: blue; 
+    } 
+
+    /*021*/
+    .box span:hover {  
+     color: yellow; 
+    }  
+     
+    /*201*/
+    /* #detail span#title { 
+     color: pink;
+    }    */
+  </style>
+  <p id="detail" class="box"> 
+    <span class="title" id="title" >饥人谷</span>
+  </p> -->
+
+  <!-- <style>
+    #detail.box {  /*110 ?*/    
+     color: red; 
+    } 
+    span.title  {  /*011 ?*/
+      color: blue;
+    }
+  </style>
+  <p id="detail" class="box"> 
+    <span class="title" id="title" >饥人谷</span>
+  </p> -->
+
+
+  <!-- <style>
+    body {
+      font-size: 20px;
+      border: 1px solid red;
+      background-color: grey;
+    }
+  </style>
+  <h1>h1</h1>
+  <p>p</p>
+  <div>
+    <div>div</div>
+  </div> -->
+
+
+  <!-- <style>
+    p {
+      color: red;
+      background-color: rgba(0, 0, 0, 0.3); 
+      /* background-color: #f2f2f2; */
+      border: 1px solid #aaa;
+      opacity: 1;
+    }
+
+    p:hover {
+      opacity: 0.4;
+      /* transition: opacity 0.3s; */
+    }
+  </style>
+  <p>hello</p> -->
+
+
+  <!-- <style>
+    .item-1 {
+      font-size: 20px;
+    }
+
+    /* body {
+      font-size: 20px;
+    } */
+    .item-2 {
+      font-size: 2em;
+    }
+    .item-3 {
+      font-size: 2rem;
+    }
+  </style>
+  <p class="item-1">font-size: 20px</p>
+  <p class="item-2">font-size: 2em</p>
+  <p class="item-3">font-size: 2rem</p>
+  <h1>hello</h1> -->
+
+  <style>
+    .wrap {
+      font-size: 20px;
+    }
+    .wrap .inner-1 {
+      text-indent: 2em;
+      /* font-size: 2em; */
+      
+    }
+    .wrap .inner-2 {
+      font-size: 2rem;
+      text-indent: 2rem;
+    }
+  </style>
+  
+  <div class="wrap">
+    <div class="inner-1">abc</div>
+    <div class="inner-2">abc</div>
+  </div>
+
+
+  <!-- <style>
+    .wrap {
+      text-align: justify;
+    }
+  </style>
+  <div class="wrap">
+    你好，你好饥人谷你好，你好饥人谷你好，你好饥人谷你好，你好饥人谷你好，你好饥人谷你好，你好饥人谷你好，你好饥人谷你好，你好饥人谷你好，你好饥人谷你好，你好饥人谷你好，你好饥人谷你好，你好饥人谷你好，你好饥人谷你好，你好饥人谷你好，你好饥人谷你好，你好饥人谷你好，你好饥人谷你好，你好饥人谷
+  </div> -->
+
+  <!-- <style>
+    h1 {
+      width: 200px;
+      border: 1px solid red;
+      /* 文字遇边界不折行，1行展示 */
+      white-space: nowrap; 
+      /* 超出边界隐藏 */ 
+      overflow: hidden;    
+      
+      /* 文本溢出时...展示 */ 
+      text-overflow: ellipsis;    
+    }
+  </style>
+  <h1>hello world, hello world, hello world</h1> -->
+
+  <style>
+    h1 {
+      width: 200px;
+      overflow: hidden;     
+      display: -webkit-box;
+      -webkit-line-clamp: 2; 
+      -webkit-box-orient: vertical;
+    }
+  </style>
+  <h1>hello world, hello world, hello world</h1>
+</body>
+</html>

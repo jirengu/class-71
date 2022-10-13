@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>form</title>
+</head>
+<body>
+  
+  <form class="form" action="/login" method="post">
+    <h1 class="form__title">登录</h1>
+    <div class="form__input">
+      <label for="username">用户名</label>
+      <input id="username" class="form__username" name="username" type="text" required placeholder="输入用户名">
+    </div>
+    <div class="form__input">
+      <label for="password">密码</label>
+      <input id="password" class="form__password" name="password" type="password" autofocus placeholder="输入密码">
+    </div>
+    <div class="form__hobby">
+      <input name="hobby" type="checkbox" value="music"> 音乐
+      <input name="hobby" type="checkbox" value="football"> 足球
+    </div>
+    <div class="form__sex">
+      <input name="sex" type="radio" value="female"> 女
+      <input name="sex" type="radio" value="male"> 男
+    </div>
+    <div class="form__textarea">
+      <textarea name="intro" cols="30" rows="10" placeholder="个人介绍"></textarea>
+    </div>
+    <div class="form__city">
+      <!--multiple size="2"-->
+      <select name="city">
+        <option value="beijing">北京</option>
+        <option value="shanghai" selected >上海</option>
+        <option value="hangzhou" >杭州</option>
+      </select>
+    </div>
+    <div class="form__others">
+      <input type="email" placeholder="email">
+      <input type="file">
+      <input type="date">
+      <input type="time" >
+      <input type="time" disabled>
+      <input type="range">
+      <input type="tel">
+    </div>
+
+    <div class="form__buttons">
+      <input type="button" value="确定">
+      <input type="submit" value="提交">
+      <input type="reset" value="重置">
+    </div>
+
+  </form>
+</body>
+</html>

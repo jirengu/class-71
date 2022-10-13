@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CSS调试</title>
+  <style>
+    body {
+      margin: 0;
+    }
+
+    a {
+      text-decoration: none;
+    }
+  </style>
+</head>
+
+<body>
+  <h1 style="text-decoration: underline;">饥人谷</h1>
+
+  <style>
+    #header {
+      padding: 10px;
+      border: 1px solid lightgrey;
+    }
+  </style>
+  <div id="header">header</div>
+
+  <style>
+    .active {
+      font-weight: bold;
+    }
+  </style>
+  <ul>
+    <li class="active">项目1</li>
+    <li class="active">项目2</li>
+    <li>项目3</li>
+  </ul>
+
+  <style>
+    a:hover {
+      color: red;
+    }
+  </style>
+  <a href="#">饥人谷</a>
+
+  <style>
+    .icon-check::before {
+      content: '✅';
+    }
+  </style>
+  <span class="icon-check">你好</span>
+
+  <style>
+    [disabled] {
+      border: 1px solid red;
+    }
+
+    [title="jirengu"] {
+      color: #666;
+    }
+  </style>
+  <input type="text" disabled>
+  <p title="jirengu">饥人谷</p>
+
+  <!-- <style>
+    * {
+      border: 1px solid #ccc;
+    }
+
+    .box * {
+      font-size: 24px;
+    }
+  </style> -->
+
+<style>
+  .menu>.item {
+    border: 1px solid red;
+  }
+</style>
+<div class="item">ccc</div>
+<ul class="menu">
+  <li>dd
+    <ul>
+      <li class="item">aaa</li>
+    </ul>
+  </li>
+  <li class="item">bbb</li>
+</ul>
+
+<style>
+  .item.active {
+    color: red;
+  }
+
+  .link:hover {}
+  .clearfix::after {}
+  article.layout{}
+</style>
+<ul>
+  <li class="item">111</li>
+  <li class="item active">222</li>
+</ul>
+
+
+<style>
+  .title, .detail {
+    font-size: 20px;
+  }
+  .detail {
+    color: grey;
+  }
+
+  .title {
+    font-size: 20px;
+  }
+
+  .detail {
+    color: grey;
+    font-size: 20px;
+  }
+</style>
+<h1 class="title">饥人谷</h1>
+<p class="detail">求知若饥 虚心似谷</p>
+
+<!-- <style>
+  .active ~ li {
+    color: red;
+  }
+  </style>
+<ul>
+  <li class="active">111</li>
+  <li>222</li>
+  <li>333</li>
+</ul> -->
+
+<style>
+  .active + li {
+    color: blue;
+  }
+  </style>
+<ul>
+  <li class="active">111</li>
+  <li>222</li>
+  <li>333</li>
+</ul>
+
+
+
+</body>
+
+</html>
