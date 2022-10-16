@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>菜单</title>
+  <style>
+    nav .item {
+      position: relative;
+      display: inline-block;
+      margin-right: 20px;
+      /* border: 1px solid red; */
+    }
+
+    /* nav .item > a {
+      font-size: 30px;
+    } */
+
+    nav .subnav {
+      position: absolute;
+      top: 100%;
+      left: 0;
+      width: 110px;
+      background-color: #fff;
+      box-shadow: 0 0 4px 0 rgba(0, 0, 0, 0.2);
+      border-radius: 4px;
+      list-style: none;
+      padding: 0;
+      display: none;
+    }
+
+    nav .subnav > li {
+      padding: 4px 10px;
+      cursor: pointer;
+    }
+
+    nav .subnav > li:hover {
+      background:rgba(0, 0, 0, 0.2)
+    }
+
+    nav .item:hover .subnav {
+      display: block;
+    }
+  </style>
+</head>
+<body>
+  <nav>
+    <ul>
+      <li class="item">
+        <a href="#">菜单1</a>
+        <ul class="subnav">
+          <li>子菜单1-1</li>
+          <li>子菜单1-2</li>
+          <li>子菜单1-3</li>
+        </ul>
+      </li>
+      <li class="item">
+        <a href="#">菜单2</a>
+        <ul class="subnav">
+          <li>子菜单2-1</li>
+          <li>子菜单2-2</li>
+          <li>子菜单2-3</li>
+        </ul>
+      </li>
+      <li class="item">
+        <a href="#">菜单3</a>
+      </li>
+    </ul>
+  </nav>
+</body>
+</html>

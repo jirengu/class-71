@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>层叠上下文测试1</title>
+  <style>
+
+    .box {
+      height: 200px;
+      padding: 20px;
+    }
+
+    .box1 {
+      position: relative;
+      z-index: 1;
+      background: red;
+    }
+
+    .box1-1 {
+      position: absolute;
+      left: 10px;
+      z-index: 1000; 
+      background: pink;
+    }
+
+    .box2 {
+      position: relative;
+      top: -100px;
+      left: 60px;
+      /* z-index: 2; */
+      background: green;
+    }
+
+    .box2-1 {
+      position: absolute;
+      z-index: 10;  /*添加z-index，试试改变数值*/
+      background: greenyellow;
+    }
+
+    .box3 {
+      position: relative;
+      z-index: 1;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="box box1">
+    box1 relative z-index:1
+    <div>
+      <div>
+        <div>
+          <div class="box box1-1">
+          box1-1 absolute z-index:1000
+        </div>
+        </div>
+      </div>
+    </div>
+    
+  </div>
+
+  <div>
+    <div class="box box2">
+      box2 relative z-index:2
+      <div>
+        <div class="box box2-1">
+          box2-1 absolute z-index:100
+        </div>
+      </div>
+      
+    </div>
+  </div>
+<div class="box3">box3</div>
+</body>
+
+</html>

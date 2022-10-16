@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>modal</title>
+  <style>
+    .modal {
+      display: none;
+    }
+
+    .modal:target {
+      display: block;
+    }
+
+    .modal::before {
+      content: '';
+      position: fixed;
+      left: 0;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      background-color: rgba(0, 0, 0, 0.4);
+    }
+
+    .modal .dialog {
+      position: fixed;
+      left: 50%;
+      top: 50%;
+      transform: translate(-50%, -50%);
+      width: 80%;
+      height: 400px;
+      border-radius: 8px;
+      background-color: #fff;
+    }
+
+    .modal .header {
+      padding: 8px 10px;
+      color: #666;
+      font-weight: bold;
+      border-bottom: 1px solid #ccc;
+    }
+
+    .modal .header .close {
+      position: absolute;
+      right: 0px;
+      top: -10px;
+      padding: 20px;
+      text-decoration: none;
+      cursor: pointer;
+    }
+
+    .modal .content {
+      padding: 10px 30px;
+    }
+  </style>
+</head>
+<body>
+  <a href="#modal">点我</a>
+  <div id="modal" class="modal">
+    <div class="dialog">
+      <div class="header">
+        这是标题 <a class="close" href="#">x</a>
+      </div>
+      <div class="content">
+        <p>这是内容</p>
+      </div>
+    </div>
+  </div>
+</body>
+</html>

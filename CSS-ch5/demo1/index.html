@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+<style>
+  nav .item {
+    display: inline-block;
+    position: relative;
+  }
+
+  nav .subnav  {
+    position: absolute; 
+    top: 100%;
+    left: 0;
+    z-index: 1;
+    list-style: none;
+    width: 80px;
+    padding: 0px;
+    box-shadow: 1px 1px 2px 0 rgba(0, 0, 0, 0.2);
+    font-size: 13px;
+    background-color: #fff;
+    display: none;
+  }
+
+  nav .subnav > li {
+    padding: 8px;
+    cursor: pointer;
+  }
+
+  nav .subnav > li:hover {
+    background:rgba(0, 0, 0, 0.2)
+  }
+
+  nav .item:hover .subnav{
+    display: block;
+  }
+</style>
+<nav class="nav">
+  <ul>
+    <li class="item"> 
+      <a href="#">菜单1</a>
+      <ul class="subnav">
+        <li>子菜单1</li>
+        <li>子菜单2</li>
+        <li>子菜单3</li>
+      </ul>
+    </li>
+    <li class="item">
+      <a href="#">菜单2</a>
+    </li>
+  </ul>
+</nav>
+</body>
+</html>
