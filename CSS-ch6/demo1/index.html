@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+<!-- <style>
+.container {
+  display: flex;
+  flex-direction: row;
+}
+.item {
+  flex: 1;
+  border: 1px solid #ccc;
+}
+</style>
+<div class="container">
+  <div class="item">1</div>
+  <div class="item">2</div>
+  <div class="item">3</div>
+</div> -->
+
+
+<!-- 
+<style>
+.container {
+  display: flex;
+  flex-wrap: wrap;
+  width: 260px;
+  background-color: lightcyan;
+}
+.item {
+  width: 100px;
+  background: lightpink;
+  margin: 2px;
+}
+</style>
+<div class="container">
+  <div class="item">1</div>
+  <div class="item">2</div>
+  <div class="item">3</div>
+</div> -->
+
+<!-- <style>
+.container {
+  display: flex;
+  justify-content: space-between;
+  width: 260px;
+  background-color: lightcyan;
+}
+.item {
+  width: 50px;
+  background: lightpink;
+}
+</style>
+<div class="container">
+  <div class="item">1</div>
+  <div class="item">2</div>
+  <div class="item">3</div>
+</div> -->
+
+<!-- <style>
+.container {
+  display: flex;
+  align-items: center;
+  height:120px;
+  background-color: lightcyan;
+}
+.item {
+  width: 50px;
+  background: lightpink;
+}
+</style>
+<div class="container">
+  <div class="item"><h1>1</h1></div>
+  <div class="item"><p>2</p></div>
+  <div class="item">3</div>
+</div> -->
+
+<!-- <style>
+  .container {
+    display: flex;
+    justify-content: flex-start;
+    height:120px;
+    width: 200px;
+    background-color: lightcyan;
+  }
+  .item {
+    width: 80px;
+    background: lightpink;
+  }
+  </style>
+  <div class="container">
+    <div class="item"><h1>1</h1></div>
+    <div class="item"><p>2</p></div>
+    <div class="item">3</div>
+  </div> -->
+
+<!-- <style>
+  .container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height:200px;
+    width: 200px;
+    background-color: lightcyan;
+  }
+  .item {
+    background: lightpink;
+    padding: 10px;
+  }
+</style>
+<div class="container">
+  <div class="item">
+    <h4>标题</h4>
+    <p>这里是内容</p>
+  </div>
+</div>   -->
+
+<!-- <style>
+  .container {
+    display: flex;
+    justify-content: space-around;
+    width: 200px;
+    background-color: lightcyan;
+  }
+  .item {
+    background: lightpink;
+  }
+  .item:first-child {
+    order: 99;
+  }
+</style>
+<div class="container">
+  <div class="item last">last</div>
+  <div class="item">2</div>
+  <div class="item">3</div>
+  <div class="item">4</div>
+</div> -->
+
+<!-- <div class="box">
+  <div class="item">1</div>
+  <div class="item">222</div>
+  <div class="item">3</div>
+</div>
+<style>
+  .box {
+    display: flex;
+    background-color: #eee;
+  }
+  .item:nth-child(1) {
+    background: red;
+  }
+  .item:nth-child(2) {
+    width: 70px;
+    flex-basis: auto;
+    background: grey;
+  }
+  .item:nth-child(3) {
+    width: 50px;
+    flex-basis: 100px;
+    background: yellow;
+  }
+</style> -->
+
+<!-- <style>
+  .box {
+    display: flex;
+    width: 400px;
+    background-color: #eee;
+  }
+  .item:nth-child(1) {
+    width: 50px;
+    background: red;
+  }
+  .item:nth-child(2) {
+    width: 70px;
+    flex-basis: auto;
+    flex-grow: 2;
+    background: grey;
+  }
+  .item:nth-child(3) {
+    width: 50px;
+    flex-basis: 100px;
+    flex-grow: 1;
+    background: yellow;
+  }
+</style>
+<div class="box">
+  <div class="item">1</div>
+  <div class="item">222</div>
+  <div class="item">3</div>
+</div> -->
+
+
+<!-- 
+<style>
+  .box {
+    width: 400px;
+    display: flex;
+    background-color: #eee;
+  }
+  .item:nth-child(1) {
+    width: 250px;
+    background: red;
+  }
+  .item:nth-child(2) {
+    width: 150px;
+    flex-basis: auto; 
+    flex-shrink: 2; 
+    background: grey;
+  }
+  .item:nth-child(3) {
+    width: 50px; 
+    flex-basis: 100px;
+    flex-shrink: 2;
+    background: yellow;
+  }
+</style>
+<div class="box">
+  <div class="item">1</div>
+  <div class="item">222</div>
+  <div class="item">3</div>
+</div> -->
+
+<!-- <style>
+.container {
+  display: flex;
+}
+.item {
+  flex: 1 2 100px; /*flex-grow: 1; flex-shrink: 2; flex-basis: 100px;*/
+  flex: 2;         /*flex-grow: 2; flex-shrink: 1; flex-basis: 0;*/
+  flex: auto;      /*flex-grow: 1; flex-shrink: 1; flex-basis: auto;*/
+  flex: 1;         /*flex-grow: 1; flex-shrink: 1; flex-basis: 0;*/
+  flex: 2 50px;    /*flex-grow: 2; flex-shrink: 1; flex-basis: 50;*/
+}
+
+</style>
+<div class="container">
+  <div class="item">1</div>
+  <div class="item2">2</div>
+</div> -->
+
+<!-- <style>
+  .container { display: flex; width: 300px; }
+  .item { border: 1px solid #ccc; }
+  .flex-1 .item { flex: 1; }
+  .flex-auto .item { flex: auto; }
+</style>
+<div class="container flex-1">
+  <div class="item">1111111111</div>
+  <div class="item">2</div>
+  <div class="item">3</div>
+</div>
+<div class="container flex-auto">
+  <div class="item">1111111111</div>
+  <div class="item">2</div>
+  <div class="item">3</div>
+</div> -->
+
+<style>
+  article {
+  display: flex;
+  padding: 10px;
+  box-shadow: 0 0 3px 0 #0004;
+  border-radius: 4px;
+}
+
+article > img {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  background: #eee;
+  padding: 10px;
+}
+
+article > p {
+  flex: 1;
+  margin-left: 20px;
+}
+</style>
+<article>
+  <img src="https://static.xiedaimala.com/xdml/image/f40ceb64-df08-4420-9226-7f76dbff15d5/MjAyMi0xMC0xNy0xMi0yMC00Ny05OA==.jpg">
+  <p>这是一个简单的两栏布局，左侧固定宽度，右侧自适应，很常见的一个结构</p>
+</article>
+</body>
+</html>

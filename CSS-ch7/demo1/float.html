@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+<!-- <style>
+  .child {
+    float: left; /*right*/
+    width: 50px;
+    margin: 10px;
+    border: 1px solid red;
+  }
+  .container {
+    border: 1px solid black;
+  }
+  .container::after {
+    content: '';
+    display: block;
+    clear: both;
+  }
+</style>
+<div class="container">
+  <div class="child">1</div>
+  <div class="child">2</div>
+  <div class="child">3</div>
+</div> -->
+<style>
+article {
+  padding: 10px;
+  box-shadow: 0 0 3px 0 #0004;
+  border-radius: 4px;
+}
+
+.clearfix::after {
+  content: '';
+  display: block;
+  clear: both;
+}
+
+article > img {
+  float: left;
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  background: #eee;
+  padding: 10px;
+}
+
+article > p {
+  margin-left: 100px;
+}
+</style>
+<article class="clearfix">
+  <img src="https://static.xiedaimala.com/xdml/image/f40ceb64-df08-4420-9226-7f76dbff15d5/MjAyMi0xMC0xNy0xMi0yMC00Ny05OA==.jpg">
+  <p>这是一个简单的两栏布局，左侧固定宽度，右侧自适应，很常见的一个结构</p>
+</article>
+
+</body>
+
+</html>

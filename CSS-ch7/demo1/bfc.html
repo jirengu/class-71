@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+<!-- <style>
+  .child {
+    float: left;
+    width: 50px;
+    margin: 10px;
+    border: 1px solid red;
+  }
+  .container {
+    /*创建BFC，试试去掉这个*/
+    border: 1px solid black;
+    margin-top: 30px;
+  }
+  .bfc {
+    overflow: hidden; 
+  }
+</style>
+<div class="container bfc">
+  <div class="child">1</div>
+  <div class="child">2</div>
+  <div class="child">3</div>
+</div>
+<div class="container">
+  <div class="child">1</div>
+  <div class="child">2</div>
+  <div class="child">3</div>
+</div> -->
+
+<!-- <style>
+.wrapper {
+  max-width: 600px;
+  border: 1px solid #eee;
+  margin-top: 30px;
+}
+
+.wrapper img {
+  float: left;
+  height: 50px;
+  margin-right: 10px;
+}
+
+.wrapper .text {
+  background: #ccc;
+  padding: 10px;
+}
+.bfc {
+  overflow: auto;
+}
+</style>
+<div class="wrapper">
+  <img src="https://static.xiedaimala.com/xdml/image/f40ceb64-df08-4420-9226-7f76dbff15d5/MjAyMi0xMC0xNy0xMi0yMC00Ny05OA==.jpg">
+  <div class="text">内部的块级盒子会在垂直方向，一个接一个地放置。
+两个盒子垂直方向的间距由margin决定。属于同一个BFC的两个相邻盒子的外边距会发生折叠。
+BFC的区域不会与浮动盒重叠</div>
+</div>
+<div class="wrapper">
+  <img src="https://static.xiedaimala.com/xdml/image/f40ceb64-df08-4420-9226-7f76dbff15d5/MjAyMi0xMC0xNy0xMi0yMC00Ny05OA==.jpg">
+  <div class="text bfc">内部的块级盒子会在垂直方向，一个接一个地放置。
+两个盒子垂直方向的间距由margin决定。属于同一个BFC的两个相邻盒子的外边距会发生折叠。
+BFC的区域不会与浮动盒重叠</div> -->
+
+
+
+<style>
+.parent {
+  width: 200px;
+  height: 100px;
+  margin: 20px;
+  background: red;
+  overflow: auto;
+}
+
+.child {
+  width: 100px;
+  height: 50px;
+  background: blue;
+  margin: 20px;
+}
+</style>
+<div class="parent">
+  <div class="child"></div>
+</div>
+<div class="parent"></div>
+</body>
+</html>
