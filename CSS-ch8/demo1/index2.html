@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>响应式</title>
+</head>
+<body>
+<style>
+  body {
+    display: grid;
+    grid: auto auto auto / 1fr 200px;
+  }
+
+  header {
+    background: grey;
+    grid-area: 1/1/2/3;
+  }
+
+  aside {
+    background: pink;
+    grid-area: 2/2/3/3;
+  }
+
+  main {
+    background: yellow;
+    grid-area: 2/1/2/2;
+  }
+
+  footer {
+    background: cyan;
+    grid-area: 3/1/4/3;
+  }
+
+  @media (max-width: 768px) {
+    main { grid-area: 2/1/3/3; }
+    aside { grid-area: 3/1/4/3; }
+    footer { grid-area: 4/1/5/3; }
+  }
+  @media (min-width: 1200px) {
+    body { grid: auto auto auto / 1fr 800px 200px 1fr; }
+    header { grid-area: 1/2/2/4; }
+    main { grid-area: 2/2/3/3; }
+    aside { grid-area: 2/3/3/4; }
+    footer { grid-area: 3/2/5/4; }
+  }
+</style>
+<header>header</header>
+<aside>aside</aside>
+<main>
+  <h1>标题</h1>
+  <p>内容</p>
+</main>
+<footer>footer</footer>
+</body>
+</html>

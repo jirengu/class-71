@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+<script>
+  
+// let a = 3
+// let b = a
+// a = 13
+// console.log(b)
+
+// let arr1 = [3, 1, 8]
+// let arr2 = arr1
+// arr1[0] = 13
+// console.log(arr2)
+
+// let a = "饥人谷"
+// let b = "饥人谷"
+// console.log(a === b) //true
+
+// let obj1 = {a: 1, b: 2}
+// let obj2 = {a: 1, b: 2}
+// console.log(obj1 === obj2)//f
+// console.log([] === [])//f
+
+// function sum(a, b) { return a+b }
+// const sum2 = () => a + b
+// let sum3 = sum
+// console.log( sum2 === sum )//f
+// console.log( sum3 === sum ) //
+
+// function inc(n){
+//   //等价于 let n = a 
+//   n++
+// }
+// let a = 1
+// inc(a)
+// console.log(a) //1
+
+// function incArr(){
+//   let arr = arr1 
+//   //arr[0]++
+//   arr = []
+// }
+
+// /**
+//  * arr1 | 0x001 
+//  * arr | 0x003
+//  * 
+//  * 
+//  * 
+//  * 0x001 | [1, 2, 3]
+//  * 0x003 | []
+//  * 
+//  */
+
+// let arr1 = [1, 2, 3]
+// incArr(arr1) //[2, 2, 3]
+// console.log(arr1)
+
+// var a = 1
+// let b = 2
+// {
+//   var a = 11
+//   let b = 22
+//   console.log(a)
+//   console.log(b)
+// }
+// console.log(a)
+// console.log(b)
+
+// a = 3;
+// var a;
+// console.log(a)
+
+// b = 3;
+// let b;
+
+// b = 3;
+// const b;
+
+// var a
+// var a
+
+// a = 1;
+// a = 2;
+// console.log(2)
+
+// let a = 1;
+// let a = 2;
+
+// const a = 1;
+// const a = 2;
+// let a = 1
+// {
+//   let a = 2
+//   console.log(a)
+// }
+// console.log(a)
+
+// const a = undefined;
+
+// const a = 1
+// a = 2 //报错吗
+
+// const obj = {name: '饥人谷'}
+// obj.name = 'jirengu' //报错吗
+
+// const arr = [1, 2, 3]
+// arr[0] = 2 //报错吗
+
+// const arr2 = []
+// arr2 = [] //报错吗
+
+
+
+// a = 3
+// console.log(a) 
+// var a 
+
+// function doSomething() {
+//   console.log(b)
+//   var b = 10
+//   console.log(b)
+// }
+// doSomething()
+// fn()
+// const fn = (a , b) => a + b
+
+// function fn() {
+//   console.log(a) //报错
+// }
+// fn()
+
+
+// function fn() {
+//   let a = 1
+//   console.log(a) 
+// }
+// fn()
+// console.log(a)
+
+// let a = 1
+// function fn() {
+//   console.log(a)  //正常
+// }
+// fn()
+
+// let a = 0
+// function foo() {
+//   let a = 1
+//   bar()
+// }
+// function bar() {
+//   //找的是哪里的a
+//   console.log(a)  
+// }
+// foo()
+
+// let a = 0
+// function foo() {
+//   let a = 1
+//   bar()
+//   function bar() {
+//     //找的是哪里的a
+//     console.log(a)  
+//   }
+// }
+// foo()
+
+
+// let a = 0
+// function foo() {
+//   var a
+//   function bar() {
+//     console.log(a)  
+//   }
+  
+//   bar()
+//   a = 1
+  
+// }
+// foo()
+
+// let a = 0
+// function foo() {
+//   //
+//   bar()
+//   //
+//   let a = 1
+//   function bar() {
+//     console.log(a)  
+//   }
+// }
+// foo()
+
+// var a = 1
+
+// function fn1(){
+//   function fn2(){
+//     console.log(a)
+//   }
+//   function fn3(){
+//     var a = 4
+//     fn2()
+//   }
+//   var a = 2
+//   return fn3
+// }
+
+// var fn = fn1()
+// fn() //输出多少
+
+var a = 1
+function fn1(){
+  function fn3(){
+    function fn2(){
+      console.log(a)
+    }
+
+    fn2()
+    var a = 4
+  }
+  var a = 2
+  return fn3
+}
+var fn = fn1()
+fn() //输出多少
+</script>
+</body>
+</html>

@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>H搜</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      min-height: 100vh;
+      font-family: "Microsoft Yahei Light","Microsoft Yahei","PingFang SC","Helvetica Neue",Helvetica,Tahoma,Arial,sans-serif;
+      background: radial-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.8)) center no-repeat,
+      url(images/5.jpg) center center no-repeat;
+      background-size: cover;
+      backdrop-filter: blur(3px);
+    }
+
+    .time {
+      font-size: 36px;
+      color: #fff;
+      margin-top: 110px;
+    }
+
+    .search {
+      margin-top: 60px;
+      background-color: rgba(255, 255, 255, 0.35);
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+      border-radius: 20px;
+      overflow: hidden;
+      backdrop-filter: blur(10px);
+    }
+    .search input {
+      font-size: 14px;
+      width: 230px;
+      line-height: 40px;
+      border: none;
+      padding: 0 20px;
+      outline: none;
+      background-color: transparent;
+    }
+    .search input::-webkit-input-placeholder {
+      color: rgba(255,255,255,0.9);
+      text-shadow: 0 0 4px rgba(0,0,0,0.2);
+    }
+  </style>
+</head>
+<body>
+  <div class="time">10月24日 20:30</div>
+  <div class="search">
+    <input type="text" placeholder="搜索">
+    
+  </div>
+  <div class="footer"></div>
+</body>
+</html>

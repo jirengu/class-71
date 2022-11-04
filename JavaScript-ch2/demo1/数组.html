@@ -1,0 +1,13 @@
+<script>
+let arr = [3, [1, 2, 3], 'hello', true, 8]
+console.log( arr.length ) //5 数组长度
+console.log( arr[0] )  //3 数组第0项
+console.log( arr[0][1] ) //2
+console.log( arr[4] )  //8
+console.log( arr[arr.length-1] )  // 8 数组最后一项
+console.log( arr[5] )  //undefined 越界得到undefined
+arr[arr.length] = 1  //给数组末尾新增一个1
+arr.length = 0       //清空数组
+console.log(arr)  
+
+</script>

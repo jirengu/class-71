@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <!-- <style>
+    .box {
+      width: 100px;
+      height: 100px;
+      background-color: bisque;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transition: all 3s ease;
+    }
+    .box:hover {
+      border-radius: 50px;
+      background-color: aqua;
+      color: #fff;
+    }
+    </style>
+    <div class="box">饥人谷</div> -->
+
+    <!-- <style>
+      .box {
+        width: 100px;
+        height: 100px;
+        background-color: lightcoral;
+        transition: all .3s;
+      }
+      .box:hover {
+        /* transform: translate(10px, 50%); */
+        /* transform: translateX(10px); */
+        /* transform: translateY(10px); */
+        /* transform: translateZ(10px); */
+        /* transform: scale(2, 0.5); */
+        /* transform: scale(0.5); */
+        /* transform: rotate(90deg); */
+        /* transform: skew(30deg, 20deg); */
+        transform: translateX(10px) rotate(30deg) scale(1.5);
+      }
+    </style>
+    <div class="box"></div> -->
+
+
+    <!-- <style>
+      .box {
+        width: 100px;
+        height: 100px;
+        background-color: lightcoral;
+        animation: rotate 3s linear 1 both;
+      }
+
+      @keyframes rotate {
+        0% {
+          transform: rotate(45deg);
+        }
+        100% {
+          transform: rotate(180deg);
+        }
+      }
+    </style>
+    <div class="box">A</div> -->
+
+    <!-- <style>
+      .box {
+        width: 100px;
+        height: 100px;
+        background-color: lightcoral;
+        /* animation: rotate 1s;   */
+        /* animation: rotate 1s linear;  */
+        /* animation: rotate 1s ease 3s;   */
+        /* animation: rotate 1s linear infinite; */
+        animation: rotate 4s cubic-bezier(0,1,.98,-0.4) 2s infinite alternate; */
+      }
+    @keyframes rotate {
+      0% {
+        transform: rotate(0);
+      }
+      100% {
+        transform: rotate(180deg);
+      }
+    }
+    </style>
+    <div class="box"></div> -->
+<!-- 
+    <style>
+      .box {
+        position: relative;
+        z-index: 0;
+        width: 200px;
+        height: 100px;
+        border: 1px solid #ccc;
+        background: url(https://static.xiedaimala.com/xdml/image/fb0a9923-5abf-4856-95c7-eff07b5bcd51/MjAyMi05LTI2LTEyLTI5LTU5LTQ3.jpg) center no-repeat;
+        background-size: cover;
+        overflow: hidden;
+      }
+
+      .box::before {
+        content: '';
+        position: absolute;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        top: 0;
+        background-color: rgba(0, 0, 0, 0.4);
+        transform: translateX(100%);
+        transition: all 1s ease;
+      }
+
+      .box:hover::before {
+        transform: translateX(0);
+      }
+    </style>
+    <div class="box"></div> -->
+
+
+
+    <style>
+      .box {
+        position: relative;
+        z-index: 1;
+        width: 200px;
+        height: 100px;
+        background: url(https://static.xiedaimala.com/xdml/image/fb0a9923-5abf-4856-95c7-eff07b5bcd51/MjAyMi05LTI2LTEyLTI5LTU5LTQ3.jpg) center no-repeat;
+        background-size: cover;
+        border: 1px solid #ccc;
+        border-radius: 8px;
+        overflow: hidden;
+      }
+      .box::after {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background-color: rgba(0, 0, 0, 1);
+        opacity: 0.4;
+        transform: translateX(100%);
+        transition: all 1s ease;
+      }
+      .box:hover::after {
+        opacity: 0.4;
+        transform: translateX(0);
+      }
+    </style>
+    <div class="box">
+    </div>
+
+</body>
+</html>

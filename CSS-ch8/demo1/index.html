@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+
+<!-- <style>
+  p {
+    font-family: serif;
+  }
+</style>
+<p>Hello 饥人谷</p>
+<p>Hello &#x9965;&#x4eba;&#x8c37;</p> -->
+<!-- 
+<style>
+.box {
+  width: 100px;
+  height: 100px;
+  background-color: bisque;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s;
+}
+.box:hover {
+  border-radius: 50px;
+  background-color: aqua;
+  color: #fff;
+}
+</style>
+<div class="box">饥人谷</div> -->
+
+
+<!-- <style>
+  .box {
+    width: 100px;
+    height: 100px;
+    background-color: lightcoral;
+    transition: all .3s;
+  }
+  .box:hover {
+    transform: translate(10px, 50%);
+    transform: translateX(10px);
+    transform: translateY(10px);
+    transform: translateZ(10px);
+    transform: scale(2, 0.5);
+    transform: scale(0.5);
+    transform: rotate(45deg);
+    transform: skew(30deg, 20deg);
+    transform: translateX(10px) rotate(30deg) scale(1.5);
+  }
+</style>
+<div class="box"></div> -->
+
+<!-- <style>
+  .box {
+    width: 100px;
+    height: 100px;
+    margin-top: 30px;
+    background-color: lightcoral;
+    animation: rotate 1s;  
+    animation: rotate 1s linear; 
+    animation: rotate 1s ease 3s;  
+    animation: rotate 1s linear infinite;
+    animation: rotate 4s cubic-bezier(0,1,.98,-0.4) 2s infinite alternate;
+  }
+@keyframes rotate {
+  0% {
+    transform: rotate(0);
+  }
+  100% {
+    transform: rotate(180deg);
+  }
+}
+</style>
+<div class="box"></div> -->
+
+
+<style>
+.notice { display: none;}
+@media print {
+  p {  border: 1px solid #000;}
+}
+/*landscape 横屏 视窗宽>高； portrait 竖屏 视窗宽<高*/
+@media (orientation: landscape) {
+  .notice { display: block; }
+}
+@media (max-width: 1000px) {
+  body { color: red; }
+}
+@media (max-width: 768px) {
+  body { color: blue; }
+}
+@media (max-width: 400px) {
+  body { color: pink; }
+}
+</style>
+<p>hello world</p>
+<p class="notice">不支持横屏</p>
+
+
+</body>
+</html>

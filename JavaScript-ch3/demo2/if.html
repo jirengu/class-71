@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <!-- hello
+  <script>
+    let inputStr = prompt('输入数字')
+    console.log(inputStr, parseInt(inputStr, 10))
+    if(parseInt(inputStr, 10) >= 80) {
+      console.log('优秀')
+    } else {
+      console.log('继续加油')
+    }
+  </script> -->
+
+  <!-- <input type="text">
+<div id="message"></div>
+
+<script>
+let $input = document.querySelector('input')
+let $message = document.querySelector('#message')
+$input.oninput = function() {
+  let num = parseInt($input.value)
+  if(num >= 80) {
+    $message.innerText = '优秀'
+  } else {
+    $message.innerText = '继续加油'
+  }
+}
+</script> -->
+
+<!-- <script>
+let wordColor = 'blue'
+let hexColor
+switch (wordColor) {
+  case 'red':
+    hexColor = '#f00'
+    break
+  case 'blue':
+    hexColor = '#0f0'
+    break
+  case 'yellow':
+  case 'pink':
+    hexColor = '#fff'
+    break
+  default:
+    hexColor = '#000'
+}
+console.log(hexColor)
+</script> -->
+
+<!-- <script>
+  let arr = [3, 4, 5, 8]
+  for(let i=0; i<arr.length; i++) {
+    console.log(arr[i])
+  }
+</script> -->
+
+<!-- <script>
+  let obj = {
+    name: '小明',
+    age: 20,
+    sex: '男'
+  }
+  for(let key in obj) {
+    console.log(`${key}:${obj[key]}`)
+  }
+</script> -->
+
+<!-- <script>
+  let arr = [3, 4, 5, 8]
+  for(let val of arr) {
+    console.log(val*val)
+  }
+</script> -->
+
+<script>
+  let arr = [2, 3, -2, 2]
+  let result = 0
+  // for(let i=0; i<arr.length; i++) {
+  //   result += arr[i]
+  // }
+  for(let i=0; i<arr.length; i++) {
+    if(arr[i] < 0) continue
+    result += arr[i]**2
+  }
+  console.log(result)
+</script>
+</body>
+</html>

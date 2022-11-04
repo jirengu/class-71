@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>JS Bin</title>
+  <style>
+  .ball {
+    position: fixed;
+    bottom: 0;
+    left: 10px;
+    width: 100px;
+    height: 100px;
+    background: radial-gradient(at 20% 30%, rgba(0, 0, 0, 0.02) 0px, rgba(0, 0, 0, 0.2) 50%, rgba(0, 0, 0, 0.6) );
+    border-radius: 50%;
+    animation: fall-1 3s cubic-bezier(.68,.23,.89,.41) both
+    /* up 3s  cubic-bezier(.68,.23,.89,.41) both reverse; */
+  }
+    
+  @keyframes fall-1 {
+    0% { transform: translateY(-90vh); }
+    50% { transform: translateY(0vh); opacity: 1; }
+    50.01% { opacity: 0; }
+    50.02% { opacity: 1; transform: translateY(-50vh);}
+    70% { transform: translateY(0vh); }
+    70.01% { opacity: 0;}
+    70.02% { opacity: 1; transform: translateY(-25vh); }
+    85% { transform: translateY(0);}
+    85.01% { opacity: 0; }
+    85.02% { opacity: 1; transform: translateY(-12vh); }
+    95% { transform: translateY(0vh); }
+    95.01% { opacity: 0; }
+    95.02% { opacity: 1; transform: translateY(-12vh); }
+    98% { transform: translateY(0vh); }
+    98.01% { opacity: 0; }
+    98.02% { opacity: 1; transform: translateY(-12vh); }
+    100% { transform: translateY(0vh);}
+  }
+    
+  @keyframes up {
+    0% { transform: translateY(-90vh); opacity: 0;}
+    50% { transform: translateY(0vh); opacity: 0; }
+    50.01% { opacity: 1; transform: translateY(0vh);}
+    69.99% { opacity: 1; transform: translateY(-50vh);}
+    70% { opacity: 0;}
+    84.99% { opacity: 0;  transform: translateY(0);}
+    85% { opacity: 1; transform: translateY(0);}
+    85.02% { opacity: 1; transform: translateY(-12vh); }
+    95% { transform: translateY(0vh); }
+    95.01% { opacity: 0; }
+    95.02% { opacity: 1; transform: translateY(-12vh); }
+    98% { transform: translateY(0vh); }
+    98.01% { opacity: 0; }
+    98.02% { opacity: 1; transform: translateY(-12vh); }
+    100% { transform: translateY(0vh);}
+  }
+  
+  </style>
+</head>
+<body>
+  <div class="ball"></div>
+</body>
+</html>

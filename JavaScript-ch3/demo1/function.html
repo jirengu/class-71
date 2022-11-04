@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+<script>
+
+// function sum(num1, num2) {
+//   let result = num1 + num2
+//   return result
+// }
+
+// let num1 = sum(1, 2)
+// console.log(num1)
+// let num2 = sum(3, 4)
+// console.log(num2)
+
+// function base10(str) {
+//   let num = 0
+//   let idx = 0
+//   while (idx < str.length) {
+//     num = num + parseInt(str[str.length - idx - 1]) * (2 ** idx)
+//     idx++
+//   }
+//   return num
+// }
+
+// console.log(base10('11000000'))
+
+function randomIP() {
+  //0.0.0.0~255.255.255.255
+  const randomNum = () => Math.floor(Math.random()*256)
+  return `${randomNum()}.${randomNum()}.${randomNum()}.${randomNum()}`
+}
+console.log(randomIP())
+
+function randomColor() {
+  //#fa0934  
+  let dict = '0123456789abcdef'
+  const randCh = () => dict[Math.floor(Math.random()*dict.length)]
+  return `#${randCh()}${randCh()}${randCh()}${randCh()}${randCh()}${randCh()}`
+}
+
+const randomColor2 = () => '#'+[0,0,0,0,0,0].map(v=>('0123456789abcdef')[Math.floor(Math.random()*dict.length)])
+
+/**
+1
+1 1
+1 2 1
+1 3 3 1
+1 4 6 4 1 
+**/ 
+
+function generate(n) {
+  if(n < 1) return []
+  let arr = [[1]]
+  for(let i=1; i<n; i++) {
+    arr[i] = []
+    for(let j=0; j<i+1; j++) {
+      arr[i][j] = (arr[i-1][j-1]||0) + (arr[i-1][j]||0)
+    }
+  }
+  return arr
+}
+
+console.log(generate(2))
+
+
+
+</script>
+</body>
+</html>

@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <script>
+
+  // function count(str) {
+  //   let obj = {}
+  //   for(let ch of str) {
+  //     if(ch === ' ') continue
+  //     if(obj[ch] === undefined) {
+  //       obj[ch] = 1
+  //     } else {
+  //       obj[ch]++
+  //     }
+      
+  //   }
+  //   return obj
+  // }
+
+  // let obj = count('hello world')
+  /*
+  h e l l o _ w o r l d
+  {
+    _h_:_1_
+    _e_: _1_
+    l : 3
+    ....
+  }
+  */
+  // console.log(obj)
+
+// function base10(str) {
+//   let num = 0
+//   let idx = 0
+//   while (idx < str.length) {
+//     num += parseInt(str[str.length - idx - 1]) * (2 ** idx)
+//     idx++
+//   }
+//   return num
+// }
+
+// function base10(str) {
+//   let num = 0
+//   for(let i=0; i<str.length; i++) {
+//     num += parseInt(str[i])*2**(str.length-i-1)
+//   }
+//   return num
+// }
+
+// console.log(base10('1100'))
+
+  /**
+   * 0.0.0.0 ~ 255.255.255.255
+   */
+  function getRandomIp() {
+    const randomN = () => Math.floor(Math.random()*256)
+    return `${randomN()}.${randomN()}.${randomN()}.${randomN()}`
+  }
+
+  const getRandomIp2 = () => [0,0,0,0].map(v => Math.floor(Math.random()*256)).join('.')
+
+  console.log( getRandomIp2() )
+
+  function generate(n) {
+    if(n < 1) return []
+    let arr = [[1]]
+    for(let i=1; i<n; i++) {
+      arr[i] = []
+      for(let j=0; j<i+1; j++) {
+        arr[i][j] = (arr[i-1][j-1]||0) + (arr[i-1][j]||0)
+      }
+    }
+    return arr
+  }
+
+  console.log( generate(0) )
+  </script>
+</body>
+</html>

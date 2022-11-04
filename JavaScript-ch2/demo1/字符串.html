@@ -1,0 +1,56 @@
+<script>
+// let str1 = 'hello jirengu'
+// let str2 = "hello jirengu"
+// let str3 = `
+// hello
+// jirengu
+// `
+// let str4 = "饥人谷\n培养有灵魂的工程师"
+// let str5 = "饥人谷,培养\"有灵魂\"的工程师"
+// let str6 = "D:\\Games\\war3"
+
+// let name = '饥人谷', age = 99
+// let str7 = `告诉你，${name}能活${age}年`
+// console.log(str7)
+
+// let str1 = "hello" 
+// console.log( str1.length )  //5
+// console.log( str1[0] )  //'h'
+// console.log( str1[str1.length - 1] ) //'o'
+// console.log( str1.charAt(0) )  //'h' 
+// console.log( str1.charCodeAt(0) ) //104 Unicode值,前128等同ASCII值 
+
+// let str2 = "world"
+// console.log( str1 + " " + str2 ) // 'hello world'
+// console.log( `${str1} ${str2}` ) // 'hello world'
+// let str5 = str1.concat(str2)
+// console.log(str5) //'helloworld'
+
+// let str = "Hello jirengu, hello world"
+
+// console.log( str.search('el') )      // 1
+// console.log( str.indexOf('el') )     // 1
+// console.log( str.lastIndexOf('el') ) //16
+// console.log( str.indexOf('饥人谷') )  // -1
+// console.log( str.includes('el') )    // true
+// console.log( str.startsWith('He') )  // true
+// console.log( str.endsWith('ld') )    // true
+
+// console.log( str.substr(1, 3) ) //ell 第一个是开始位置，下标从0开始， 第二个是长度
+// console.log( str.substring(1, 3) ) //el 第一个是开始位置，第二个是结束位置(不包含)
+
+
+console.log( 'abc'.split('') ) //['a','b','c'] 把字符串打散成数组
+console.log( ' abc  '.trim() ) //'abc'  去掉两边的空白字符
+console.log( ' abc ' ).trimLeft() //'abc ' 去掉左边的空白字符
+console.log( 'aBc'.toUpperCase() ) //'ABC' 变成大写
+console.log( 'Abc'.toLowerCase() ) //'abc' 变成小写
+
+//小练习，如何截取str里面的链接
+let str = '<a href="https://developer.mozilla.org/zh-CN/docs/Web/JavaScript">MDN</a>'
+let start = str.indexOf('"') + 1
+let end = str.lastIndexOf('"')
+let result = str.substring(start, end)
+console.log(result)
+
+</script>

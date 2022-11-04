@@ -1,0 +1,15 @@
+<script>
+let people = {
+  name: '小明',
+  age: 20
+}
+console.log( people )
+console.log( people.name ) //'小明'
+people.age = 30
+console.log( people.age )  //30
+console.log( people.sex )  //undefined 访问一个不存在的属性，得到undefined
+console.log( people['age'] ) //获取属性值的另外一种写法
+let key = 'age'
+console.log( people[key] )  //把属性放在变量里
+console.log( people['key'] ) //undefined
+</script>

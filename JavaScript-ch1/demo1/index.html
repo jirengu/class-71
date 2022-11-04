@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  
+</head>
+<body>
+  <p>hello world</p>
+
+  <script src="index.js"></script>
+  <script>
+//     console.log('hello world')
+
+// var a = 1
+// let num = 1;
+// let str = 'hello';
+// let obj = {name: 'jirengu'};
+// const url = 'https://jirengu.com';
+
+// //总共有3条语句
+// let str = '饥人谷'
+// let str2 = '前端'; let str3 = str + str2;
+
+// //这是单行注释
+// let str = '饥人谷'   //这也是单行注释
+// /*
+//  这是多行注释
+//  这是多行注释
+//  */
+
+
+// let isChecked = true;
+// let attr = null;
+// let name;
+// console.log(name);
+// let num = 100;
+// let bignum = 100n;
+// let str = 'jirengu';
+// let key1 = Symbol();
+
+// let obj = {name: "jirengu", age: 99};
+// let arr = [3, 4, 5];
+
+// typeof 123    //"number"
+// typeof '123'  // "string"
+// typeof true   // "boolean"
+// typeof 123n   // "bigint"
+// typeof undefined // "undefined"
+// typeof null    // "object"
+// typeof {a: 1}  // "object"
+// typeof []      // "object"
+// typeof Symbol() // "symbol"
+// typeof function(){}  // "function"
+
+
+// console.log(2 + 4)    // 6
+// consoel.log('2' + '4')  // "24"
+// console.log(2 + '4')   // "24"
+// let obj = {
+//   a: 1, 
+//   valueOf: function() { return 3 } 
+// }
+// console.log(1 + obj) // 4
+// console.log(+'4')   // 4
+
+// let a = 3;
+// let b = ++a;
+// console.log(a);  //4
+// console.log(b);  //b
+
+// let a = 3;
+// let b = a++;
+// console.log(a);  //4
+// console.log(b);  //3
+
+// 1 === 1   //true
+// 1 === '1' //false
+// 3 > 2     //true
+// 1 == '1'  //true
+// 0 == ''   //true
+// 1 !== '1' //true
+
+// console.log(!true)  //false
+// console.log(!false) //true
+// let a = 70, b = 80;
+// console.log(a > 60 && b > 60); //true
+// console.log(a > 60 && b);  //80
+// console.log(a > 90 && b);  //false
+// console.log(a > 60 || b > 90); //true
+// let c;
+// let d = c || 100;    
+// console.log(c)   //100
+// let score = a>60?'及格':'不及格';
+// console.log(score); //'及格'
+
+
+// 5|3 // 7
+// 0b101|0b011 //0b111 === 7
+// 5&3 
+// 0b101&0b011  //0b001 === 1
+// ~5 //-6     //x + ~x + 1 === 0
+// 5^3 // 6
+// 0b101^0b011 //0b110 === 6
+// 3<<3        //24
+// 0b011<<3    //0b011000 === 24
+// 3>>1        //1
+// 0b011>>1    //0b01  === 1
+// let a = 3, b = 4; //交换数，仅了解
+// a = a ^ b;
+// b = a ^ b;
+// a = a ^ b;
+
+// typeof 2+3
+// typeof (2+3)
+// typeof typeof 2+3
+
+// let a = 2, b = 3
+// console.log(a+++b)
+
+// let c = d = 5
+// console.log(c)
+// let x = (a = 1, b = 2)
+// console.log(x, a, b)
+
+// function sayHello(name) {
+//   console.log('hello ' + name )
+// }
+
+// sayHello('饥人谷')
+
+// const sayHello = function (name) {
+//   console.log('hello ' + name )
+// }
+
+// sayHello('饥人谷')
+
+// function printInfo(name, age){
+//   console.log(name)
+//   console.log(age)
+// }
+// printInfo('饥人谷', 5)
+
+// function sum(...args){
+//   // console.log(args)
+//   let result = 0
+//   for(let i=0; i<args.length; i++) {
+//     result += args[i]
+//   }
+//   // console.log(result)
+//   return result
+// }
+// console.log( sum(1, 2) )
+// console.log( sum(3, 2, 5) )
+
+
+// function sum1(num1, num2) {
+//   let result = num1 + num2
+//   console.log(result) 
+// }
+// let num1 = sum1(1, 2)
+// console.log(num1)
+
+// function sum2(num1, num2) {
+//   let result = num1 + num2
+//   return result
+// }
+// let num2 = sum2(1, 1)
+// console.log(num2)
+
+
+const sum = function(a, b) {
+  return a + b
+}
+// 等价于
+const sum = (a, b) => {
+  return a + b
+}
+//如果函数体只有return，可简化成
+const sum = (a, b) => a + b
+
+//如果参数只有一个，可把参数小括号去掉
+const inc = n => ++n
+
+//如果返回的值是对象，对象需要加小括号
+const createPet = name => ({name: name}) 
+
+const sum = a => b => a + b
+console.log( sum(3)(4) )
+//等价于
+function sum(a) {
+  return function(b) {
+    return a + b
+  }
+}
+
+// // 多个参数
+// const sum = (a, b) => a + b
+
+// const sumOfSquares = arr => {
+//   let result = 0
+//   for(let v in arr) {
+//     result += v**2
+//   } 
+//   return result
+// } 
+
+// const add = a => b => a + b
+// add(3)(4)
+
+// function count(str) {
+//   let obj = {}
+//   for (let ch of str) {
+//     if (obj[ch] !== undefined) {
+//       obj[ch]++
+//     } else {
+//       obj[ch] = 1
+//     }
+//   }
+//   return obj
+// }
+// console.log( count('hello world') )
+
+
+
+  </script>
+</body>
+</html>

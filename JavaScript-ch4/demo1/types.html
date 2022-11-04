@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+<script>
+// let a = 3
+// let b = a
+// a = 13
+// console.log(b)
+
+// let arr1 = [3, 1, 8]
+// let arr2 = arr1
+// arr1[0] = 13
+// console.log(arr2)
+
+
+
+// let a = 1
+// let b = 1
+// console.log(a === b)
+
+// let obj1 = {a: 1, b: 2}
+// let obj2 = {a: 1, b: 2}
+// console.log(obj1 === obj2)
+
+// console.log([] === [])
+
+// function sum(a, b) { return a+b }
+// const sum2 = () => a + b
+// let sum3 = sum
+// console.log( sum2 === sum )
+// console.log( sum3 === sum )
+
+
+// function inc(n){
+//   //let n = a 
+//   n++
+// }
+// let a = 1
+// inc(a)
+// console.log(a) //1
+
+
+// function incArr(arr){
+//   //let arr = arr1 
+//   arr[0]++
+// }
+// let arr1 = [1, 2, 3]
+// incArr(arr1) //[2, 2, 3]
+// console.log(arr1)
+
+// function inc(n){
+//   return n++
+// }
+// let a = 1
+// let b = inc(a)
+// console.log(b)
+
+
+// var a = 1
+// let b = 2
+// if(true) {
+//   var a = 11
+//   let b = 22
+// }
+// console.log(a) 
+// console.log(b)
+
+// a = 3
+// var a
+// {
+//   var a = 2
+// }
+// console.log(a)
+// // //等价于
+// var a
+// var a
+// a = 3
+// a = 2
+// console.log(a)
+
+
+// a = 3  //报错，在生命前使用
+// let a   
+// let a = 2 //报错，重复声明
+
+// for(let i=0; i<3; i++) {
+//   console.log(i)
+// }
+// console.log(i) //报错
+
+// //报错，cosnt声明必须同时初始化
+// const a 
+
+// const a = 1
+// a = 2 //报错，不能修改const值
+
+// const a = 1
+// a = 2 //报错吗
+
+// const obj = {name: '饥人谷'}
+// obj.name = 'Hello World' //报错吗
+
+// const arr = [1, 2, 3]
+// arr[0] = 2 //报错吗
+
+// const arr2 = []
+// arr2 = [] //报错吗
+
+// a = 3
+// console.log(a) 
+// var a 
+
+// function doSomething() {
+//   console.log(b)
+//   var b = 10
+//   console.log(b)
+// }
+// doSomething()
+
+// var a
+// function doSomething() {
+//   var b
+//   console.log(b)
+//   b = 10
+//   console.log(b)
+// }
+// a = 3
+// console.log(a) 
+// doSomething()
+
+
+// fn()  //不会报错
+// function fn() {
+//   console.log('Hello jirengu.com')
+// }
+
+// fn2()   //会报错，函数表达式不会前置
+// const fn2 = function() { 
+//   console.log('fn2') 
+// }
+
+// function fn() {
+//   console.log(a) //报错
+// }
+// fn()
+
+// function fn() {
+//   let a = 1
+//   console.log(a) 
+// }
+// fn()
+// console.log(a) //报错
+
+// let a = 1
+// function fn() {
+//   console.log(a)  //正常
+// }
+// fn()
+
+// function foo() {
+//   console.log('foo')
+//   bar()
+// }
+// function bar() {
+//   console.log('bar')
+// }
+// foo()
+
+// let a = 0
+// function foo() {
+//   let a = 1
+//   bar()
+// }
+// function bar() {
+//   //找的是哪里的a
+//   console.log(a)  
+// }
+// foo()
+
+// let a = 0
+// function foo() {
+//   let a = 1
+//   bar()
+//   function bar() {
+//     //找的是哪里的a
+//     console.log(a)  
+//   }
+// }
+// foo()
+
+// let a = 0
+// function foo() {
+//   bar()
+//   var a = 1
+//   function bar() {
+//     console.log(a)  
+//   }
+// }
+// foo()
+
+// let a = 0
+// function foo() {
+//   bar()
+//   let a = 1
+//   function bar() {
+//     console.log(a)  
+//   }
+// }
+// foo()
+
+// var a = 1
+
+// function fn1(){
+//   function fn2(){
+//     console.log(a)
+//   }
+//   function fn3(){
+//     var a = 4
+//     fn2()
+//   }
+//   var a = 2
+//   return fn3
+// }
+
+// var fn = fn1()
+// fn() //输出多少
+
+// var a = 1
+// function fn1(){
+//   function fn3(){
+//     var a = 4
+//     fn2()
+//   }
+//   var a = 2
+//   return fn3
+// }
+
+// function fn2(){
+//   console.log(a)
+// }
+
+// var fn = fn1()
+// fn() //输出多少
+
+
+var a = 1
+function fn1(){
+  function fn3(){
+    function fn2(){
+      console.log(a)
+    }
+
+    fn2()
+    var a = 4
+  }
+  var a = 2
+  return fn3
+}
+var fn = fn1()
+fn() //输出多少
+
+
+</script>
+</body>
+</html>

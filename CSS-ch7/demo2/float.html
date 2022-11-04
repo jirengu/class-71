@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>float</title>
+</head>
+<body>
+  <style>
+    .container {
+      border: 1px solid #000;
+      overflow: hidden;
+    }
+    .box {
+      width: 43.3%;
+      border: 1px solid red;
+      float: left;
+      box-sizing: border-box;
+    }
+    /* .clearfix::after {
+      content: '';
+      display: block;
+      clear: both;
+    }  */
+
+    p {
+      background: red;
+    }
+
+  
+    
+  </style>
+  <div class="container clearfix">
+    <div class="box">child1</div>
+    <div class="box">child2</div>
+    <div class="box">child3</div>
+  </div>
+  <p>hello world</p>
+</body>
+</html>

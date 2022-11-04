@@ -1,0 +1,113 @@
+<!-- <input type="text">
+<div id="message"></div>
+
+<script>
+let $input = document.querySelector('input')
+let $message = document.querySelector('#message')
+$input.oninput = function() {
+  let num = parseInt($input.value)
+  if(num >=80) {
+    $message.innerText = '优秀'
+  } else {
+    $message.innerText = '继续加油'
+  }
+}
+</script>
+<script>
+let inputVal = prompt("请输入分数");
+if(parseInt(inputVal) >= 80) {
+  console.log('优秀')
+} else {
+  console.log('继续加油')
+} 
+</script> -->
+
+
+<script>
+  // switch(expresstion){
+  //     case value1:
+  //         statement;
+  //         break;
+  //     case value2:
+  //         statement;
+  //         break;
+  //     case value3:
+  //         statement;
+  //         break;
+  //     default:
+  //         statement;
+  // }
+  // let wordColor = 'yellow'
+  // let hexColor
+  // switch (wordColor) {
+  //   case 'red':
+  //     hexColor = '#f00'
+  //     break
+  //   case 'blue':
+  //     hexColor = '#0f0'
+  //     break
+  //   case 'yellow':
+  //   case 'pink':
+  //     hexColor = '#fff'
+  //     break
+  //   default:
+  //     hexColor = '#000'
+  // }
+  // console.log(hexColor)
+
+
+  // let i = 10
+  // while(i > 0) {
+  //   console.log(i)
+  //   i--
+  // }
+
+  // let i = 10
+  // do {
+  //   console.log(i)
+  //   i--
+  // } while(i>0)
+
+  // for(let i = 10; i > 0; i--) {
+  //   console.log(i)
+  // }
+
+  // let obj = {
+  //   name: '小明',
+  //   age: 20,
+  //   sex: '男'
+  // }
+  // for(let key in obj) {
+  //     console.log(`${key}:${obj[key]}`) 
+  // }
+
+  // let str = ''
+  // for(let char of 'hello') {
+  //   str += char + char
+  // }
+  // console.log(str) //hheelllloo
+
+// for (let i = 0; i < 10; i++) {
+//   if (i % 2 === 0) {
+//     continue
+//   }
+//   console.log(i) //1 3 5 7 9
+// }
+
+// for (let i = 0; i < 10; i++) {
+//   console.log(i) //0
+//   if (i % 2 === 0) {
+//     break
+//   }
+// }
+
+let arr = [2, 3, -2, 2]
+let sumOfSquare = 0
+for(let i=0; i<arr.length; i++) {
+  if(arr[i]<0) {
+    continue
+  }
+  sumOfSquare += arr[i]*arr[i]
+}
+console.log(sumOfSquare)
+</script>

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+
+  <script>
+    console.log(typeof 2+3)   //"number3"
+    console.log(typeof (2+3)) //"number"
+    console.log(typeof typeof 2+3) //typeof "number"+3  => "string"+3 =>"string3"
+    
+    let a = 2, b = 3
+    console.log(a+++b) //a++ +b => 5 , a+ ++b x
+    
+    let c = d = 5
+    console.log(c)   //5
+    let x = (a = 1, b = 2) 
+    console.log(x, a, b)
+    
+    let num = 50
+    let isOk = false
+    let result = !isOk&&num+10>60  //
+    console.log(result)
+    </script>
+</body>
+</html>

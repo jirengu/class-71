@@ -1,0 +1,28 @@
+<script>
+// let num1 = 10    //10
+// let num2 = 0b10  //2 二进制
+// let num3 = 010   //8 八进制
+// let num4 = 0x10  //16 十六进制
+// console.log( parseInt('100') ) //100 默认10进制
+// console.log( parseInt('100', 10) ) //建议加上进制数
+// console.log( parseInt('100', 2) )  //4 设置2进制
+// console.log( parseInt('0x100') ) //256 如果没传进制，且以0x开头，当成16进制
+// console.log( parseInt('100.345') ) //100 去掉小数
+// console.log( parseInt('ab100') ) //NaN 不以数字开头转换失败
+// console.log( 0.1 + 0.2 === 0.3 )  //false 浮点数无法精确表示
+// console.log( parseFloat('34.56') ) //34.56
+// let num5 = 34.5678
+// console.log( num5.toFixed(2) ) //'34.56' 保留两位小数
+// console.log( num5.toPrecision(5) ) //'34.567' 限制整数加小数的总位数
+// console.log( 2**53-1 < 2**53 && 2**53 < 2**53+1) //false，超出最大安全值
+// console.log(Number.MAX_SAFE_INTEGER) //2**53-1 最大安全值
+// console.log(Number.MAX_VALUE) //1.79e+308  最大值
+// console.log(Number.MAX_VALUE*2) //Infinity
+console.log( Math.floor(99.9) ) //99 向下取整
+console.log( Math.ceil(99.1) )  //100 向上取整
+console.log( Math.round(99.5) ) //100 四舍五入
+console.log( Math.random() ) //得到一个0～1的伪随机数，包括0不包括1
+console.log( Math.floor(Math.random()*(100-0+1)) ) //0到100，包括0和100
+console.log( 11+Math.floor(Math.random()*(99-11+1)) ) //11到99， 包括11和99
+console.log( Math.pow(3, 4) ) // 81， 计算3的4次方
+</script>
