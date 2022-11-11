@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <script>
+// let arr = [3, 4, 'hello', true, 8]
+// let val = arr.pop()  
+// console.log(val)   //8
+// console.log(arr)   //[3, 4, 'hello', true]
+// arr.push(100)
+// console.log(arr)   //[3, 4, 'hello', true, 100]
+
+// arr.unshift(10) 
+// console.log(arr)   //[10, 3, 4, 'hello', true, 100]
+// arr.shift()
+// console.log(arr)   //[3, 4, 'hello', true, 100] 
+
+// //从1开始删除2个元素
+// let arr = [3, 4, 'hello', true, 8]
+// arr.splice(1, 2)  //[4, 'hello']
+// console.log(arr)  //[3, true, 8]
+
+// // 插入1个元素
+// let arr1 = [3, 4, 'hello', true, 8]
+// arr1.splice(1, 0, 'world')
+// console.log(arr1)  // [3, 'world', 4, 'hello', true, 8]
+
+// //替换
+// let arr2 = [3, 4, 'hello', true, 8]
+// arr2.splice(2, 2, 'world', false)
+// console.log(arr2)  // [3, 4, world, false, 8]
+
+// let arr = [4, 5, 6]
+// let arr2 = arr.concat(7)  //concat 方法原数组保持不变 
+// console.log(arr2)         //[4, 5, 6, 7]
+// let arr3 = arr.concat([8, 9])
+// console.log(arr3)         //[4, 5, 6, 8, 9]
+
+
+// let str = 'jirengu'
+// let arr4 = str.split('')
+// console.log( arr4.join('') ) //'jirengu'       // '456'
+// console.log( arr4.join('-') ) //'j-i-r-e-n-g-u'
+
+
+// let arr = [3, 1, 5]
+// arr.sort()
+// console.log(arr) //[1,3,5]
+
+// let arr2 = [3, 11, 5]
+// arr2.sort()
+// console.log(arr2) //[11,3,5]
+
+// arr2.sort((v1,v2)=>v1>v2?1:-1)
+// console.log(arr2) //[3,5,11]
+// arr2.sort((v1,v2)=>v1<v2?1:-1)
+// console.log(arr2) //[11,5,3]
+
+// arr2.reverse()
+// console.log(arr2)
+
+
+// let students = [
+//   {name: 'ab', score: 80},
+//   {name: 'bc', score:90 },
+//   {name: 'ad', score: 70}
+// ]
+// //按 score 排序
+// students.sort((s1, s2)=>s1.score>s2.score?1:-1)
+// console.log(students)
+// //按 name 排序
+// students.sort((s1, s2)=>s1.name>s2.name?1:-1)
+// console.log(students)
+
+// let arr = [1, 4, 2]
+// arr.forEach(function(val) {
+//   console.log(val)
+// })
+
+// arr.forEach(function(val, index, array) {
+//   array[index] = val**2
+// })
+
+// arr.forEach(val => {
+//   console.log( val**2 )
+// })
+
+
+// let arr1 = arr.map(v => v**2)
+// console.log(arr1)  //[1, 16, 9, 81]
+
+// let arr = [4, -2, -1, 9]
+// let arr1 = arr.filter(val => val > 0)   //过滤出正数
+// console.log(arr1)  //[4, 9]
+// console.log(arr)   //原数组不变
+
+// //[4, -2, -1, 9]
+// //sum=0, v=4, return 4
+// //sum=4, v=-2, return 2
+// //sum=2, v=-1, return 1
+// //sum=1, v=9, return 10, result=10
+// let result = arr.reduce((sum, v) => sum + v, 0)
+// console.log(result)   //10
+
+// let result2 = arr.reduce((res, v) => res + v**2, 0)
+// console.log(result2)
+
+
+// let arr = [4, -2, 1]
+// let isPositive = arr.every(val => val > 0)
+// console.log(isPositive)   //数组全是正数吗 false
+
+// let hasPositive = arr.some(val => val > 0)   //数组里面有正数吗 true
+// console.log(hasPositive)
+
+
+// console.log(Array.isArray([])) //true
+// console.log(Array.isArray('')) //false
+// console.log([3,4,5].indexOf(6)) //-1
+// console.log([3,4,5].indexOf(3)) //0
+// console.log([3,4,5].includes(4)) //true
+// console.log(Array(2)) //[空属性 × 2]
+// console.log(Array(2).fill(0)) //[0,0]
+// Array(10).fill(0).map((v,i)=>i) //创建一个数组内容是[0,...,9]
+// Array(10).fill(0).map((v,i)=>i+1).reduce((sum, v)=>sum+v,0) //1+2+...+10
+
+// let obj = {0:3,1:4,length:2}
+// console.log(Array.from(obj)) //[3,4]
+// console.log([...obj])  //[3,4]
+// console.log([...Array(2)]) //[undefined, undefined]
+// Array.from(Array(10)).map((v,i)=>i);
+// [...Array(10)].forEach((v, i) => {
+//   console.log('hello'+i)
+// })
+
+
+
+// const remove = arr => arr.filter((value, index) => arr.indexOf(value) === index)
+// const arr = [3, 3, 4, 'a', 'a']
+// console.log( remove(arr) )
+
+
+// const remove2 = arr => {
+//   let hash = {}
+//   for(let i=0; i<arr.length; i++) {
+//     if(!hash[arr[i]]) {
+//       hash[arr[i]] = true
+//     } else {
+//       arr.splice(i, 1)
+//      // i--
+//     }
+//   }
+// }
+// const arr1 = [3, 3, 3, 4, 1, 1]
+// remove2(arr1)
+// console.log(arr1)
+
+// const sym1 = Symbol()
+// const sym2 = Symbol('foo')
+// const sym3 = Symbol('foo')
+// console.log( sym2 === sym3 ) //false
+// let obj = {[sym1]: 'a'}
+// obj[sym2] = 'b'
+// console.log(obj[sym1])  //'a'
+
+// let set = new Set()
+// set.add('yellow')
+// set.add('red')
+// console.log( set.has('red') )
+// set.delete('red')
+// console.log( set )
+// console.log( set.size )
+
+// set.add({a:1})
+// set.forEach(v => {
+//   console.log(v)
+// })
+
+// console.log( new Set('饥人谷') )
+// let arr = [3, 4, 4, 1, 5, 5]
+// let result = [...new Set(arr)] //数组去重
+// console.log(result)
+
+
+let map = new Map()
+map.set('name', 'jirengu')
+map.set(1, 100)
+let obj = {a: 1}
+map.set(obj, 2)
+console.log( map.get('name') )
+console.log( map.get(obj) )
+map.delete('name')
+map.forEach((val, key)=> {
+  console.log(val, key)
+})
+for(let [key, value] of map) {
+  console.log(key, value)
+}
+console.log(map.size)
+
+let wm1 = new WeakMap()
+const o1 = {},
+      o2 = function() {},
+      o3 = []
+wm1.set(o1, 1)
+wm1.set(o2, o3)
+console.log( wm1.get(o1) )
+console.log( wm1.get(o2) )
+
+</script>
+</body>
+</html>

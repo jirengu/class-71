@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <div id="a" class="box box1">
+    box1
+    <span>span1</span>
+    <span>span2</span>
+  </div>
+  <div class="box">box2</div>
+  <div class="box3">
+
+  </div>
+  <button>add</button>
+
+  <script>
+    const $ = s => document.querySelector(s)
+
+
+    $('button').onclick = function() {
+      // let $node = document.createElement('div')
+      // let $text = document.createTextNode('hello')
+      // $node.appendChild($text)
+      // $('.box3').appendChild($node)
+
+      // for(let i=0; i<10;i++) {
+      //   let $node = document.createElement('div')
+      //   $node.append('hello')
+      //   $('.box3').append($node)
+      // }
+
+      let fragment = document.createDocumentFragment()
+      for(let i=0; i<10;i++) {
+        let $node = document.createElement('div')
+        $node.append('hello')
+        fragment.append($node)
+      }
+      $('.box3').append(fragment)
+    }
+
+
+
+    // $('.box3').onclick = function() {
+    //   console.log('box3')
+    // }
+
+    // let $$nodes = document.getElementsByClassName('box')
+    // for(let i=0;i<$$nodes.length; i++) {
+    //   console.log($$nodes[i])
+    // }
+
+    // for($node of $$nodes) {
+    //   console.log($node)
+    // }
+  </script>
+</body>
+</html>

@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  ss
+<style>
+  .box {
+    width: 100px;
+    height: 100px;
+    color: black;
+    background-color: aqua;
+  }
+
+  .box.active {
+    background-color: brown;
+    color: #fff;
+  }
+</style>
+<div class="box">div1</div>
+<a href="/about">link</a>
+<div class="box" style="color:red">div2</div>
+
+<button>切换</button>
+<script>
+  document.querySelector('button').onclick = function () {
+    document.querySelector('.box').classList.toggle('active')
+  }
+
+// //ES5写法，推荐
+// //获取的是一个 Element
+// document.querySelector('.box') 
+// //获取的是一个 NodeList 类数组对象，包含多个Element           
+// document.querySelectorAll('.box')         
+
+// //ES3写法，已经过时不推荐
+// document.getElementById('id')             //Element
+// document.getElementsByClassName('class')  //HTMLCollection
+// document.getElementsByTagName('p')        //HTMLCollection     、
+// document.getElementsByName('username')    //NodeList
+
+// //NodeList可以直接遍历
+// document.querySelectorAll('.box').forEach(node => {
+//   console.log(node.className)
+// })
+
+// //HTMLCollection需要转换为数组才能用forEach
+// Array.from(document.getElementsByClassName('box')).forEach(node => {
+//   console.log(node.className)
+// });
+// [...document.getElementsByClassName('box')].forEach(node => {})
+// //二者都可以用 for of 遍历
+// for(let node of document.getElementsByClassName('box')) {
+//   console.log(node.className)
+// }
+
+const $parent = document.querySelector('.box')
+const $child = $parent.querySelector('.child')
+const $$children = $parent.querySelectorAll('.child')
+
+const $ = s => document.querySelector(s)
+const $$ = s => document.querySelectorAll(s)
+console.log( $('.box') )
+console.log( $$('.box') ) 
+</script>
+</body>
+
+</html>

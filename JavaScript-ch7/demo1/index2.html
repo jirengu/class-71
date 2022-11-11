@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body><div class="box1">1</div>
+  <span>sss</span>
+  <div class="box2">2</div>
+  
+  <script>
+//     let $container = document.querySelector('.container')
+//     let $node = document.createElement('div')
+//     $node.classList.add('box')
+//     $node.append('饥人谷')
+//     $container.append($node)
+
+//     //先创建虚拟容器，把创建的dom元素放虚拟容器，最后再一次性放到真实容器
+//     let fragment = document.createDocumentFragment()
+//     Array(4).fill().forEach((v,i) => {
+//       let $node = document.createElement('div')
+//       $node.append("项目" + i)
+//       fragment.append($node)
+//     })
+//     $container.append(fragment)
+
+//     $container.append(...Array(4).fill().map((v,i) => {
+//       let $node = document.createElement('div')
+//       $node.append("项目" + i)
+//       return $node
+//     }))
+//     </script>
+
+// <script>
+
+// function f1(times) {
+//   $container.innerHTML = ''
+//   let fragment = document.createDocumentFragment()
+//   for(let i=0; i<times; i++) {
+//     let $node = document.createElement('div')
+//     $node.append("项目" + i)
+//     fragment.append($node)
+//   }
+//   $container.append(fragment)
+// }
+
+// function f2(times) {
+//   $container.innerHTML = ''
+//   for(let i=0; i<times; i++) {
+//     let $node = document.createElement('div')
+//     $node.append("项目" + i)
+//     $container.append($node)
+//   }
+// }
+
+// function f3(times) {
+//   $container.innerHTML = ''
+//   Array(times).fill().forEach((v,i) => {
+//     let $node = document.createElement('div')
+//     let $text = document.createTextNode('项目'+i)
+//     $node.appendChild($text)
+//     $container.appendChild($node)
+//   })
+// }
+// let times = 10
+// let t1 = Date.now()
+// f1(times)
+// console.log(`f1运行${times}次，耗时 ${Date.now() - t1}ms`)
+// let t2 = Date.now()
+// f2(times)
+// console.log(`f2运行${times}次，耗时 ${Date.now() - t2}ms`)
+// let t3 = Date.now()
+// f3(times)
+// console.log(`f3运行${times}次，耗时 ${Date.now() - t3}ms`)
+
+
+ 
+// function swap($node1, $node2) {
+//   if($node2.previousSibling) {
+//     let $pre = $node2.previousSibling
+//     $node1.before($node2)
+//     $pre.after($node1)
+//   } else if($node2.nextSibling) {
+//     let $next = $node2.nextSibling
+//     $node1.after($node2)
+//     $next.before($node1)
+//   }
+// }
+
+//   swap(document.querySelector('.box1'), document.querySelector('.box2'))
+
+// let $link = document.createElement('a')
+// $link.setAttribute('href', 'https://jirengu.com')
+// $link.setAttribute('target', '_blank')
+// $link.click()
+  </script>
+
+  <div class="box">
+    <input class="select-all" type="checkbox"> 全选
+    <ul>
+      <li><input class="item" type="checkbox"></li>
+      <li><input class="item" type="checkbox"></li>
+      <li><input class="item" type="checkbox"></li>
+      <li><input class="item" type="checkbox"></li>
+    </ul>
+  </div>
+  <script>
+    // const $ = s => document.querySelector(s)
+    // const $$ = s => document.querySelectorAll(s)
+    // $('.select-all').onchange = function() {
+    //   if(!this.checked) {
+    //     $$('.item').forEach($input => {
+    //       $input.checked = false
+    //     })
+    //   } else {
+    //     $$('.item').forEach($input => {
+    //       $input.checked = true
+    //     })
+    //   }
+
+    // }
+
+// const $box = document.querySelector('.box')
+// $box.style.color = 'red'
+// $box.style.fontSize = '12px'
+// let fontSize = getComputedStyle($box).fontSize
+// console.log( parseInt(fontSize) )
+  </script>
+</body>
+</html>

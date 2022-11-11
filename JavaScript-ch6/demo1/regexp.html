@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="">
+</head>
+<body>
+  <script>
+
+// let str = '13012345678'
+// console.log(/^\d{11}$/.test(str))   //字符串是11位数字吗
+
+// let reg = /hello/
+// reg.test('hello jirengu')
+
+// let name = 'jirengu'
+// let reg = new RegExp('www.'+name+'.com', 'g')
+
+// let str = 'hello1 jirengu, hello2 world'
+// str.search(/hello\d/)          //0
+// str.match(/hello\d/g)          //['hello1', 'hello2']
+// str.replace(/hello\d/g, 'hi')  // 'hi jirengu, hi world'
+// str.split(/\s/)             //["hello", "jirengu,", "hello", "world"]
+
+// let reg = /jirengu/
+// console.log( reg.test('hello jirengu') )    // true
+
+// let reg2 = /#[0-9a-f][0-9a-f][0-9a-f]/
+// console.log( reg2.test('x#0f0x') ) //true
+// console.log( reg2.test('x#h8jx') ) //false
+
+// let reg3 = /[Jj]irengu/
+// console.log( reg3.test('hi jirengu') ) //true
+// console.log( reg3.test('hi Jirengu') ) //true
+
+// console.log(/\[hello\]/.test('[hello]') ) //true
+
+
+// let str = 'he-llo jirengu, hello world'
+// let arr1 = str.split(/\s/)
+// console.log(arr1) //['he-llo', 'jirengu,', 'hello', 'world']
+
+// let arr2 = str.split(/\W/).filter(v => v!=='')
+// console.log(arr2) //['he', 'llo', 'jirengu', 'hello', 'world']
+
+// let str2 = str.replace(/\s/g, '')
+// console.log(str2) //"he-llojirengu,helloworld"
+
+// let reg1 = /\d{11}/
+// console.log( reg1.test('12345678901') ) //true 
+// let reg2 = /\d{2,4}/ //注意逗号后没空格
+// console.log( reg2.test('1234') ) //true 
+// let reg3 = /https?:\/\/jirengu\.com/
+// console.log( reg3.test('https://jirengu.com') )//true 
+// console.log( reg3.test('http://jirengu.com') )//true 
+
+
+// let str = 'hello1 world hello2 123456 ruoyu hello3'
+// str.match(/hello\d/g)   // ["hello1", "hello2", "hello3"]
+// str.match(/^hello\d/g)  // ["hello1"]
+// str.match(/hello\d$/g)   // ["hello3"]
+
+// let str2 = 'hello1 whello9orld hello2 12-hello8-3456 jirengu  ruoyu hello3'
+// str2.match(/\bhello\d\b/g)   //["hello1", "hello2", "hello8", "hello3"] 
+// //注意-也用于区分单词边界
+
+
+// let reg = /^1\d{10}$/
+// reg.test(' 13189890989')    // false
+// reg.test('a13189890989b')    // false
+// reg.test('13189890989')    // true
+// reg.test('1318989098910')    // false
+
+// let str = '123456789'
+// let reg1 = /\d{3,5}/g
+// console.log( str.match(reg1) ) //['12345', '6789']
+
+// let reg2 = /\d{3,5}?/g
+// console.log( str.match(reg2) ) //['123', '456', '789']
+
+// const text = '图片的尺寸是1440×900';
+// const reg = /(\d+)×(\d+)/;
+// const match = text.match(reg);
+// console.log(match[1], match[2])
+
+// const text = `图片1的尺寸是1440x900,图片2的尺寸是800x600`;
+// const reg = /(\d+)x(\d+)/g;
+// const match = text.matchAll(reg);
+// console.log([...match])
+
+// let str = `<div>
+//   <link rel="stylesheet" href="http://jirengu.com/style.css">
+//   <a title="百度" href="https://baidu.com">百度</a><a href="http://jirengu.com" target="_blank">饥人谷</a>
+// </div>`
+
+// let reg = /<a.+?href="(.+?)"/g
+// let arr = [...str.matchAll(reg)]
+// console.log(arr)
+// let urls = arr.map(v => v[1])
+// console.log(urls)
+
+let str = `let a = 1 
+let b = 2  
+
+console.log(a+b)
+`
+
+let str2 = str.replace(/(.) *\n/g, '$1;\n')
+console.log(str2)
+
+'a1a2c3'.replace(/a(\d)/g, 'A$1')  //'A1A2c3'
+  </script>
+
+</body>
+</html>

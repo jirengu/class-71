@@ -58,28 +58,34 @@
   /**
    * 0.0.0.0 ~ 255.255.255.255
    */
-  function getRandomIp() {
-    const randomN = () => Math.floor(Math.random()*256)
-    return `${randomN()}.${randomN()}.${randomN()}.${randomN()}`
-  }
 
-  const getRandomIp2 = () => [0,0,0,0].map(v => Math.floor(Math.random()*256)).join('.')
+  // function getRandomIp() {
+  //   const randomN = () => Math.floor(Math.random()*256)
+  //   return `${randomN()}.${randomN()}.${randomN()}.${randomN()}`
+  // }
 
-  console.log( getRandomIp2() )
+  // const getRandomIp2 = () => [0,0,0,0].map(v => Math.floor(Math.random()*256)).join('.')
 
-  function generate(n) {
-    if(n < 1) return []
-    let arr = [[1]]
-    for(let i=1; i<n; i++) {
-      arr[i] = []
-      for(let j=0; j<i+1; j++) {
-        arr[i][j] = (arr[i-1][j-1]||0) + (arr[i-1][j]||0)
-      }
-    }
-    return arr
-  }
+  // console.log( getRandomIp2() )
 
-  console.log( generate(0) )
+  // function generate(n) {
+  //   if(n < 1) return []
+  //   let arr = [[1]]
+  //   for(let i=1; i<n; i++) {
+  //     arr[i] = []
+  //     for(let j=0; j<i+1; j++) {
+  //       arr[i][j] = (arr[i-1][j-1]||0) + (arr[i-1][j]||0)
+  //     }
+  //   }
+  //   return arr
+  // }
+
+  // console.log( generate(0) )
+
+  let obj = {0:3,1:4,length:2}
+console.log(Array.from(obj)) //[3,4]
+console.log([...obj])  //[3,4]
+console.log([...Array(2)])
   </script>
 </body>
 </html>

@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <div class="container"></div>
+  <script>
+const $container = document.querySelector('.container')
+function f1(times) {
+  $container.innerHTML = ''
+  let fragment = document.createDocumentFragment()
+  for(let i=0; i<times; i++) {
+    let $node = document.createElement('div')
+    $node.append("项目" + i)
+    fragment.append($node)
+  }
+  $container.append(fragment)
+}
+
+function f2(times) {
+  $container.innerHTML = ''
+  for(let i=0; i<times; i++) {
+    let $node = document.createElement('div')
+    $node.append("项目" + i)
+    $container.append($node)
+  }
+}
+function f3(times) {
+  $container.innerHTML = ''
+  Array(times).fill().forEach((v,i) => {
+    let $node = document.createElement('div')
+    let $text = document.createTextNode('项目'+i)
+    $node.appendChild($text)
+    $container.appendChild($node)
+  })
+}
+
+let times = 1000000
+let t1 = Date.now()
+f1(times)
+console.log(`f1 ${times}次，${Date.now() - t1}ms`)
+let t2 = Date.now()
+f2(times)
+console.log(`f2 ${times}次，${Date.now() - t2}ms`)
+let t3 = Date.now()
+f3(times)
+console.log(`f3 ${times}次，${Date.now() - t3}ms`)
+
+
+  </script>
+</body>
+</html>

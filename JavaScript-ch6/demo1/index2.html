@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <script>
+  // let arr = []
+  // let arr1 = new Array()  
+  // let obj = {}
+  // let obj2 = new Object()  
+
+  // let reg = /dd/
+
+//   let reg = /jirengu/
+//   console.log(reg.test('hello jireng'))
+
+//   let reg2 = /#[0-9a-f][0-9a-f][0-9a-f]/
+// console.log( reg2.test('x#0f0x') ) //true
+// console.log( reg2.test('x#h8jx') ) //false
+
+// console.log(/\[hello\]/.test('[hello]') )
+ 
+// let str = 'he-llo jirengu, hello world'
+// let arr1 = str.split(/\s/)
+// console.log(arr1) //['he-llo', 'jirengu,', 'hello', 'world']
+
+// let arr2 = str.split(/\W/).filter(v => v!=='')
+// console.log(arr2) //['he', 'llo', 'jirengu', 'hello', 'world']
+
+// let str2 = str.replace(/\s/g, '')
+// console.log(str2) //"he-llojirengu,helloworld"
+ 
+
+// let str = 'hello1 world hello2 123456 ruoyu hello3'
+// console.log(str.match(/hello\d/g) )  // ["hello1", "hello2", "hello3"]
+// console.log(str.match(/^hello\d/g))  // ["hello1"]
+// console.log(str.match(/hello\d$/g))   // ["hello3"]
+
+// let str2 = 'hello1 whello9orld hello2 12-hello8-3456 jirengu  ruoyu hello3'
+// console.log( str2.match(/\bhello\d\b/g) )   //["hello1", "hello2", "hello8", "hello3"] 
+ 
+ 
+//  let reg = /^1\d{10}$/
+ 
+// let str = '123456789'
+// let reg1 = /\d{3,5}/g
+// console.log( str.match(reg1) ) //['12345', '6789']
+
+// let reg2 = /\d{3,5}?/g
+// console.log( str.match(reg2) ) //['123', '456', '789']
+
+// let str = '图片的尺寸是1440x900'
+// let reg = /(\d+)x(\d+)/
+// let result = str.match(reg)
+
+
+// let str  = `图片1的尺寸是1440x900,图片2的尺寸是800x600`;
+// let reg = /(\d+)x(\d+)/g
+// let result = [...str.matchAll(reg)].map(v=> ({w:v[1], h:v[2]}))
+// console.log(result)
+
+// let str = `<div>
+//   <link rel="stylesheet" href="http://jirengu.com/style.css">
+//   <a title="百度" href="https://baidu.com">百度</a><a href="http://jirengu.com" target="_blank">饥人谷</a>
+// </div>`
+
+// let reg = /<a.+?href="(.+?)"/g
+// let result = [...str.matchAll(reg)].map(v => v[1])
+
+// console.log(result)
+
+
+let str = `let a = 1  
+let b = 2 
+
+console.log(a+b) 
+`
+
+let str2 = str.replace(/(.) *\n/g, '$1;\n')
+console.log(str2)
+
+</script>
+</body>
+</html>

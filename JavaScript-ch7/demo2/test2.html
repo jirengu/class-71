@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <div class="old">old</div>
+  <div class="new">new</div>
+  <button>jump</button>
+
+  <script>
+const $ = s => document.querySelector(s)
+
+$('.old').classList.add('active')
+$('.old').classList.add('box')
+$('.old').classList.remove('box')
+console.log( $('.old').classList.contains('active') )
+$('.old').classList.toggle('box')
+
+
+
+
+    //$('.old').before($('.new'))
+    //$('.new').after('hello')
+    // let $div = document.createElement('div')
+    // $div.append('hello jirengu')
+    // $('.new').replaceWith($div)
+    // $('.new').remove()
+
+    // $('button').onclick = function() {
+    //   const $link = document.createElement('a')
+    //   $link.setAttribute('href', 'https://jirengu.com')
+    //   $link.click()
+    // }
+
+  </script>
+</body>
+</html>

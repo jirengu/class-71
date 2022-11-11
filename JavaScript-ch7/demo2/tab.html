@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    .com-tab { width: 400px; }
+    .com-tab .header { display: flex; }
+    .com-tab ul {  list-style: none; }
+    .com-tab .tab {
+      margin-right: 20px;
+      cursor: pointer;
+    }
+    .com-tab .tab.active {
+      color: blue;
+      border-bottom: 1px solid currentColor;
+    }
+    .com-tab .content {
+      width: 100%;
+    }
+    .com-tab .panel {
+      position: absolute;
+      border: 1px solid #ccc;
+      height: 200px;
+      width: 100%;
+      padding: 20px;
+      background-color: #fff;
+      box-sizing: border-box;
+      opacity: 0;
+      transition: opacity .3s;
+    }
+    .com-tab .panel.active { 
+      opacity: 1;
+      z-index: 1;
+    }
+  </style>
+  
+</head>
+<body>
+  <div class="com-tab">
+    <ul class="header">
+      <li class="tab active">用户管理</li>
+      <li class="tab">配置管理</li>
+      <li class="tab">角色管理</li>
+    </ul>
+    <ul class="content">
+      <li class="panel active">用户管理的内容</li>
+      <li class="panel">配置管理的内容</li>
+      <li class="panel">角色管理的内容</li>
+    </ul>
+  </div>
+
+  <script>
+    $$tabs = document.querySelectorAll('.tab')
+    $$panels = document.querySelectorAll('.panel')
+
+    $$tabs.forEach($tab => {
+      $tab.onclick = function() {
+        $$tabs.forEach($node => $node.classList.remove('active'))
+        $tab.classList.add('active')
+        let index = [...$$tabs].indexOf($tab)
+        $$panels.forEach($panel => $panel.classList.remove('active'))
+        $$panels[index].classList.add('active')
+      }
+    })
+
+  </script>
+</body>
+</html>

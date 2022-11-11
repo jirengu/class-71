@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <style>
+    .nums {
+      display: flex;
+    }
+    .nums span {
+      background-color: lightcyan;
+      color: red;
+      padding: 4px 8px;
+      margin-right: 10px;
+      transition: all .3s;
+    }
+    .buttons {
+      margin-top: 10px;
+    }
+  </style>
+  <div class="nums">
+    <span>3</span>
+    <span>1</span>
+    <span>7</span>
+    <span>2</span>
+    <span>4</span>
+    <span>8</span>
+    <span>5</span>
+    <span>4</span>
+  </div>
+  <div class="buttons">
+    <button class="random">随机</button>
+    <button class="big2small">从大到小</button>
+    <button class="small2big">从小到大</button>
+  </div>
+  <script>
+    const $ = s => document.querySelector(s)
+    const $$ = s => document.querySelectorAll(s)
+    const $$nums = $$('.nums>span')
+    $('.random').onclick = function() {
+      let arrs = [...$$nums].sort((node1, node2) => Math.random()>0.5?1:-1)
+      console.log(arrs)
+      arrs.forEach(($new, i) => {
+        $('.nums').append($new)
+      })
+    }
+    $('.big2small').onclick = function() {
+      let arrs = [...$$nums].sort((node1, node2) => node1.innerText < node2.innerText?1:-1)
+      console.log(arrs)
+      arrs.forEach(($new, i) => {
+        $('.nums').append($new)
+      })
+    }
+
+    $('.small2big').onclick = function() {
+      let arrs = [...$$nums].sort((node1, node2) => {
+        if(node1.innerText > node2.innerText){
+          let node2Pre = node2.previousSibling
+          node1.before(node2)
+          node2Pre.after(node1)
+          return 1
+        }
+        return -1
+      })
+      console.log(arrs.map(v=>v.innerText))
+
+    }
+  </script>
+</body>
+</html>
