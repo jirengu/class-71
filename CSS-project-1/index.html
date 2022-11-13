@@ -1,0 +1,382 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <script src="https://lf1-cdn-tos.bytegoofy.com/obj/iconpark/svg_20473_6.8b3cf0ee5d56a8d83d8687a453c47ec1.js"></script>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    .button {
+      padding: 0 40px;
+      line-height: 52px;
+      text-align: center;
+      font-size: 18px;
+      color: #333;
+      background-color: #fff;
+      border-radius: 6px;
+      border: none;
+      box-shadow: 0 0 8px 0 rgba(0, 0, 0, 0.2);
+    }
+
+    .button.button-theme {
+      background-color: lightgreen;
+      color: #fff;
+      width: 200px;
+    }
+
+
+    .layout {
+      max-width: 1320px;
+      padding: 0 60px;
+      margin: 0 auto;
+    }
+
+
+
+    body {
+      font: 16px/1.4 "PingFang SC", "Microsoft YaHei", 'Arial';
+    }
+
+
+    header {
+      padding-top: 22px;
+    }
+
+    .logo {
+      text-decoration: none;
+      display: flex;
+      align-items: center;
+      color: lightgreen;
+    }
+
+    .logo .icon {
+      width: 52px;
+      height: 52px;
+    }
+
+    .logo .title {
+      font-size: 30px;
+      margin-left: 10px;
+      font-weight: 200;
+    }
+
+    section.hero {
+      display: flex;
+    }
+
+    section.hero .text {
+      width: 470px;
+      margin-right: 60px;
+      padding-bottom: 30px;
+    }
+
+    section.hero h1 {
+      margin-top: 120px;
+      color: #343434;
+      font-size: 46px;
+      font-weight: 600;
+    }
+
+    section.hero p {
+      margin-top: 42px;
+      font-size: 24px;
+      color: #686868;
+    }
+
+    section.hero .img {
+      flex: 1;
+      display: flex;
+      align-items: center;
+    }
+
+    section.hero .img>img {
+      width: 100%;
+      border-radius: 16px;
+      box-shadow: 0 0 16px 0 rgba(0, 0, 0, 0.2);
+    }
+
+    section.hero .btns {
+      margin-top: 80px;
+    }
+
+    section.intro {
+      background-color: rgb(245, 255, 245);
+      padding: 60px 0;
+    }
+
+    section.intro .second-title {
+      text-align: center;
+      font-size: 20px;
+      color: lightgreen;
+    }
+    section.intro .title {
+      text-align: center;
+      font-size: 30px;
+      margin-top: 30px;
+    }
+    section.intro .text {
+      text-align: center;
+      font-size: 18px;
+      color: #666;
+      margin-top: 30px;
+    }
+    section.intro .panel-container {
+      display: flex;
+      flex-wrap: wrap;
+      margin-top: 30px;
+    }
+    section.intro .panel {
+      width: calc(33.3% - 16px);
+      display: flex;
+      background-color: #fff;
+      padding: 10px;
+      margin-top: 20px;
+      margin-right: 16px;
+      border-radius: 8px;;
+    }
+    section.intro .iconpark-icon {
+      width: 30px;
+      height: 30px;
+      color: lightgreen;
+    }
+    section.intro .panel .detail {
+      flex: 1;
+      margin-left: 10px;
+    }
+    section.intro .panel p {
+      margin-top: 10px;
+      color: #666;
+    }
+
+    section.detail {
+      display: flex;
+      padding-top: 60px;
+      padding-bottom: 60px;
+    }
+    section.detail .text {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      margin-right: 60px;
+    }
+    section.detail .img {
+      width: 550px;
+      display: flex;
+      align-items: center;
+    }
+    section.detail img {
+      width: 100%;
+    }
+    section.detail h1 {
+      font-size: 36px;
+    }
+    section.detail p {
+      font-size: 16px;
+      color: #666;
+      margin-top: 30px;
+    }
+    section.detail:nth-child(even) .img {
+      order: -1;
+    }
+
+
+    footer {
+      display: flex;
+    }
+    footer .author {
+      margin-left: auto;
+    }
+
+    @media (max-width:1100px) {
+      section.hero .text {
+        width: 300px;
+        margin-right: 40px;
+        padding-bottom: 20px;
+      }
+
+      section.hero h1 {
+        margin-top: 90px;
+        font-size: 30px;
+      }
+
+      section.hero p {
+        margin-top: 30px;
+        font-size: 18px;
+      }
+      .button {
+       padding: 0 20px;
+      }
+      .button.button-theme {
+        width: 160px;
+      }
+      
+      section.detail .img {
+        width: 400px;
+      }
+    }
+
+    @media (max-width:768px) {
+      section.hero {
+        flex-direction: column;
+      }
+      section.hero h1 {
+        margin-top: 30px;
+        font-size: 30px;
+      }
+      section.hero .btns {
+        margin-top: 20px;
+      }
+      section.hero .img {
+        margin-top: 30px;
+      }
+
+      section.intro .panel {
+        width: calc(50% - 16px);
+      }
+
+      section.detail {
+        flex-direction: column;
+      }
+      section.detail .text {
+        padding-bottom: 30px;
+      }
+    }
+
+  </style>
+</head>
+
+<body>
+  <header class="layout">
+    <a href="/" class="logo">
+      <svg class="icon iconpark-icon">
+        <use href="#pineapple"></use>
+      </svg>
+      <span class="title">起始页</span>
+    </a>
+  </header>
+  <section class="hero layout">
+    <div class="text">
+      <h1>简洁、美观、实用的浏览器起始页。</h1>
+      <p>全平台兼容，即开即用。</p>
+      <div class="btns">
+        <button class="button button-theme">开始使用</button>
+        <button class="button button-default">安装拓展</button>
+      </div>
+    </div>
+    <div class="img">
+      <img src="imgs/lime-intro-top-preview.jpg" alt="网站搜索页截图">
+    </div>
+  </section>
+  <section class="intro">
+    <div class="layout">
+      <h3 class="second-title">功能</h3>
+      <h1 class="title">化繁为简。</h1>
+      <p class="text">青柠起始页以最简洁的设计容纳诸多实用功能。</p>
+      <div class="panel-container">
+        <div class="panel">
+          <svg class="iconpark-icon">
+            <use href="#camera"></use>
+          </svg>
+          <div class="detail">
+            <h4>搜索</h4>
+            <p>使用您喜欢的任意搜索引擎，开启网上冲浪之旅。</p>
+          </div>
+        </div>
+        <div class="panel">
+          <svg class="iconpark-icon">
+            <use href="#config"></use>
+          </svg>
+          <div class="detail">
+            <h4>搜索</h4>
+            <p>使用您喜欢的任意搜索引擎，开启网上冲浪之旅。</p>
+          </div>
+        </div>
+        <div class="panel">
+          <svg class="iconpark-icon">
+            <use href="#config"></use>
+          </svg>
+          <div class="detail">
+            <h4>搜索</h4>
+            <p>使用您喜欢的任意搜索引擎，开启网上冲浪之旅。</p>
+          </div>
+        </div>
+        <div class="panel">
+          <svg class="iconpark-icon">
+            <use href="#config"></use>
+          </svg>
+          <div class="detail">
+            <h4>搜索</h4>
+            <p>使用您喜欢的任意搜索引擎，开启网上冲浪之旅。</p>
+          </div>
+        </div>
+        <div class="panel">
+          <svg class="iconpark-icon">
+            <use href="#config"></use>
+          </svg>
+          <div class="detail">
+            <h4>搜索</h4>
+            <p>使用您喜欢的任意搜索引擎，开启网上冲浪之旅。</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </section>
+  <section class="detail layout">
+    <div class="text">
+      <h1>全能搜索框。</h1>
+      <p>支持任何搜索引擎 / 一键翻译搜索内容 / 一键直达常用网站 / 输入算式直接计算结果——助您事半功倍。
+      </p>
+    </div>
+    <div class="img">
+      <img src="imgs/lime-intro-detail-cusnav.webp" alt="全能搜索框">
+    </div>
+  </section>
+  <section class="detail layout">
+    <div class="text">
+      <h1>全能搜索框。</h1>
+      <p>支持任何搜索引擎 / 一键翻译搜索内容 / 一键直达常用网站 / 输入算式直接计算结果——助您事半功倍。
+      </p>
+    </div>
+    <div class="img">
+      <img src="imgs/lime-intro-detail-cusnav.webp" alt="全能搜索框">
+    </div>
+  </section>
+  <section class="detail layout">
+    <div class="text">
+      <h1>全能搜索框。</h1>
+      <p>支持任何搜索引擎 / 一键翻译搜索内容 / 一键直达常用网站 / 输入算式直接计算结果——助您事半功倍。
+      </p>
+    </div>
+    <div class="img">
+      <img src="imgs/lime-intro-detail-cusnav.webp" alt="全能搜索框">
+    </div>
+  </section>
+  <section class="detail layout">
+    <div class="text">
+      <h1>全能搜索框。</h1>
+      <p>支持任何搜索引擎 / 一键翻译搜索内容 / 一键直达常用网站 / 输入算式直接计算结果——助您事半功倍。
+      </p>
+    </div>
+    <div class="img">
+      <img src="imgs/lime-intro-detail-cusnav.webp" alt="全能搜索框">
+    </div>
+  </section>
+  <section class="download"></section>
+  <section class="about"></section>
+  <footer class="layout">
+    <div class="copyright">copyright</div>
+    <div class="author">author</div>
+  </footer>
+</body>
+
+</html>
