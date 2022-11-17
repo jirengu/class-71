@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <!-- <input type="text"> <span class="log"></span>
+  <script>
+    const $input = document.querySelector('input')
+    const $log = document.querySelector('.log')
+    $input.onfocus = function() {
+      $log.innerText = '获得焦点'
+    }
+    $input.onblur = function() {
+      $log.innerText = '失去焦点'
+    }
+  </script> -->
+
+  <!-- <input type="text">
+  <select>
+    <option value="1">A</option>
+    <option value="2">B</option>
+    <option value="3">C</option>
+  </select>
+  <input type="file" class="upload">
+  <script>
+    const $ = s => document.querySelector(s)
+    $('input').onchange = function() {
+      console.log('change:', this.value)
+    }
+    $('input').oninput = function() {
+      console.log('input:', this.value)
+    }
+    $('select').onchange = function() {
+      console.log('change:', this.value)
+    }
+    $('.upload').onchange = function(e) {
+      console.log(e)
+    }
+  </script> -->
+
+
+  <form action="/login">
+    <input class="username" type="text">
+    <div class="msg"></div>
+    <button>提交</button>
+  </form>
+  <script>
+    const $ = s => document.querySelector(s)
+    $('form').addEventListener('submit', function(e){
+      e.preventDefault()
+      if(/^\w{6,12}$/.test($('.username').value)){
+        $('form').submit()
+        $('form .msg').innerText = ''
+      }else{
+        $('form .msg').innerText = '出错了'
+      } 
+    })
+  </script>
+</body>
+</html>

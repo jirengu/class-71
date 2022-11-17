@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+
+</head>
+<body>
+  <img src="https://static.xiedaimala.com/xdml/image/f40ceb64-df08-4420-9226-7f76dbff15d5/2021-5-27-16-3-3.png" alt="">
+  <script>
+    const $ = s => document.querySelector(s)
+    //页面所有资源加载完成
+    window.onload = function(){
+      console.log('window loaded')
+    }
+    //DOM 结构解析完成
+    document.addEventListener('DOMContentLoaded', function(){
+      console.log('DOMContentLoaded ')
+    })
+    console.log($('img').width) //0
+    $('img').onload = function(){
+      console.log(this.width)   //此时才能得到图片的真实大小
+    }
+  </script>
+</body>
+</html>

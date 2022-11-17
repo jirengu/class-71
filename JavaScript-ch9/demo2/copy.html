@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <style>
+    .wrap { display: flex; height: 100px;}
+    textarea { width: 50%; }
+    .preview { width: 50%; background: lightgrey;}
+  </style>
+  <div class="wrap">
+    <textarea>hello</textarea>
+    <div class="preview">ddd</div>
+  </div>
+  <footer></footer>
+  <script>
+    const $ = s => document.querySelector(s)
+    $('.preview').onpaste = function(event) {
+      let text = event.clipboardData.getData('text/plain')
+      console.log(text)
+      this.innerText = text
+      event.preventDefault()
+    }
+    $('textarea').oncopy = function(event) {
+      console.log(event.type + '-' + document.getSelection())
+      //event.preventDefault()
+      $('footer').innerText = document.getSelection()
+    }
+  </script> 
+</body>
+</html>
