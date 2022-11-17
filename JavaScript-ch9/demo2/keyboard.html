@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  <style>
+    .status span {
+      border: 1px solid #ccc;
+    }
+
+    .active {
+      color: #fff;
+      background: #000;
+    }
+
+    .text {
+      padding: 1px;
+      border: 1px solid #ccc;
+      min-height: 100px;
+      background: #000;
+      color: #fff;
+    }
+    .text::after {
+      position: relative;
+      top: 2px;
+      content: '';
+      display: inline-block;
+      width: 4px;
+      height: 12px;
+      background-color: #fff;
+      margin-left: 4px;
+      animation: blink .8s infinite;
+    }
+    @keyframes blink {
+      0% {
+        opacity: 1;
+      }
+      50% {
+        opacity: 0;
+      }
+      100% {
+        opacity: 1;
+      }
+    }
+  </style>
+  <div class="status"><span class="ctrl">ctrl</span> <span class="meta">command</span></div>
+  <pre class="text"></pre>
+  <script>
+    const $ = s => document.querySelector(s)
+    document.addEventListener('keydown', e => {
+      e.preventDefault()
+      console.log(e.key, e.keyCode)
+      switch (e.key) {
+        case 'Backspace':
+          $('.text').innerText = $('.text').innerText.slice(0, -1)
+          break;
+        case 'Enter':
+          $('.text').append('\n')
+          break;
+        default:
+          e.key.length === 1 && $('.text').append(e.key)
+          e.ctrlKey && $('.ctrl').classList.add('active')
+          e.metaKey && $('.meta').classList.add('active')
+          break;
+      }
+    })
+    document.addEventListener('keyup', e => {
+      $('.ctrl').classList.remove('active')
+      $('.meta').classList.remove('active')
+    })
+  </script>
+</body>
+
+</html>

@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+<button class="click">click</button>
+<button class="dblclick">dblclick</button>
+<button class="mouse">mouseup down click</button>
+<div class="cmenu">contentmenu</div>
+<!-- <script>
+  const $ = s => document.querySelector(s)
+  $('.click').onclick = function(e) {
+    console.log(e.clientX, e.clientY)
+    console.log(e.ctrlKey, e.metaKey)
+  }
+  $('.dblclick').ondblclick = function(e) {
+    console.log('双击')
+  }
+  $('.mouse').onmousedown = function(e) {
+    console.log('mouse down')
+  }
+  $('.mouse').onmouseup = function(e) {
+    console.log('mouse up')
+  }
+  $('.mouse').onclick = function(e) {
+    console.log('click')
+  }
+  $('.cmenu').oncontextmenu = function(e) {
+    e.preventDefault() //禁用右键菜单
+  }
+</script> -->
+
+<style>
+  .parent { width: 100px; height: 100px; background: red;}
+  .child { width: 50px; height: 50px; background: blue;}
+</style>
+<div class="parent">
+  <div class="child"></div>
+</div>
+<script>
+  const $ = s => document.querySelector(s)
+  $('.parent').addEventListener('mouseover', function() {
+    console.log('mouseover')
+  })
+  $('.parent').addEventListener('mouseout', function() {
+    console.log('mouseout')
+  })
+  $('.parent').addEventListener('mouseenter', function() {
+    console.log('mouseenter')
+  })
+  $('.parent').addEventListener('mouseleave', function() {
+    console.log('mouseleave')
+  })
+</script>
+</body>
+</html>

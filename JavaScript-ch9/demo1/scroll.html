@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+<style>
+  .wrap {
+    height: 200px;
+    overflow-y: scroll;
+  }
+</style>
+<div class="wrap">
+  <p>项目1</p>
+  <p>项目2</p>
+  <p>项目3</p>
+  <p>项目4</p>
+  <p>项目5</p>
+  <p>项目6</p>
+  <p>项目7</p>
+  <p>项目8</p>
+  <p>项目9</p>
+  <p>项目10</p>
+  <p>项目6</p>
+  <p>项目7</p>
+  <p>项目8</p>
+  <p>项目9</p>
+  <p>项目10</p>
+</div>
+<script>
+const $wrap = document.querySelector('.wrap')
+$wrap.scrollTo({
+  top: 100,
+  //left: 100,
+  behavior: 'smooth'
+})
+$wrap.onscroll = function(e) {
+  console.log(this.scrollTop)
+}
+document.onkeydown = function(e) {
+  if(e.key === 'n') {
+    $wrap.scrollBy(0, 10)
+  }
+}
+</script>
+</body>
+</html>

@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+<!-- <input type="text"> <span class="log"></span>
+<script>
+  const $input = document.querySelector('input')
+  const $log = document.querySelector('.log')
+  $input.onfocus = function() {
+    $log.innerText = '获得焦点'
+  }
+  $input.onblur = function() {
+    $log.innerText = '失去焦点'
+  }
+</script> -->
+
+<!-- <input type="text">
+<select>
+  <option value="1">A</option>
+  <option value="2">B</option>
+  <option value="3">C</option>
+</select>
+<script>
+  const $ = s => document.querySelector(s)
+  $('input').onchange = function() {
+    console.log('change:', this.value)
+  }
+  $('input').oninput = function() {
+    console.log('input:', this.value)
+  }
+  $('select').onchange = function() {
+    console.log('change:', this.value)
+  }
+</script> -->
+
+<!-- <form action="/login">
+  <input class="username" type="text">
+  <div class="msg"></div>
+  <button>提交</button>
+</form>
+<script>
+  const $ = s => document.querySelector(s)
+  $('form').addEventListener('submit', function(e){
+    e.preventDefault();
+    if(/^\w{6,12}$/.test($('.username').value)){
+      $('form').submit()
+      $('form .msg').innerText = ''
+    }else{
+      $('form .msg').innerText = '出错了'
+    } 
+  })
+</script> -->
+
+<!-- <style>
+  .wrap { display: flex; height: 100px;}
+  textarea { width: 50%; }
+  .preview { width: 50%; background: lightgrey;}
+</style>
+<div class="wrap">
+  <textarea>hello</textarea>
+  <div class="preview">ddd</div>
+</div>
+<script>
+  const $ = s => document.querySelector(s)
+  $('.preview').onpaste = function(event) {
+    let text = event.clipboardData.getData('text/plain')
+    console.log(text)
+    this.innerText = text
+    event.preventDefault()
+  }
+  $('textarea').oncopy = function(event) {
+    console.log(event.type + '-' + document.getSelection())
+    //event.preventDefault()
+  }
+</script> -->
+
+<img src="https://static.xiedaimala.com/xdml/image/f40ceb64-df08-4420-9226-7f76dbff15d5/2021-5-27-16-3-3.png" alt="">
+<script>
+  const $ = s => document.querySelector(s)
+  //页面所有资源加载完成
+  window.onload = function(){
+    console.log('window loaded')
+  }
+  //DOM 结构解析完成
+  document.addEventListener('DOMContentLoaded', function(){
+    console.log('DOMContentLoaded ')
+  })
+  console.log($('img').width) //0
+  $('img').onload = function(){
+    console.log(this.width)   //此时才能得到图片的真实大小
+  }
+</script>
+</body>
+</html>

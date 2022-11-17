@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+<!-- <button>点我</button>
+<div onclick="sayHello()">sayHello</div>
+<script>
+  const $btn = document.querySelector('button')
+  $btn.onclick = function() {
+    console.log(1)
+  }
+  $btn.onclick = function() {
+    console.log(11)
+  }
+  $btn.addEventListener('click', function() {
+    console.log(2)
+  })
+  $btn.addEventListener('click', function() {
+    console.log(22)
+  })
+  function sayHello() {
+    console.log('hello')
+  }
+</script> -->
+
+<!-- <div class="btn">Click me</div>
+<script>
+  const $btn = document.querySelector('.btn')
+  $btn.onclick = function(evt) {
+    console.log(evt)  //事件对象
+    console.log(this) //this代表$btn
+  }
+  $btn.addEventListener('click', function(evt) {
+    console.log(evt)   //事件对象
+    console.log(this)  //this代表$btn
+  })
+  $btn.onclick = (evt) => {
+    console.log(evt)    
+    console.log(this) //this代表函数外面的this，此处为window
+  }
+  $btn.addEventListener('click', () => {
+    console.log(this)  //this代表函数外面的this，此处为window
+  })
+</script> -->
+
+<!-- <button class="btn-each">each</button>
+<button class="btn-once">once</button>
+<script>
+  document.querySelector('.btn-each').addEventListener('click', () => {
+    console.log('每次都响应')
+  })
+  document.querySelector('.btn-once').addEventListener('click', () => {
+    console.log('只响应一次')
+  }, { once: true })
+ 
+</script> -->
+
+<!-- <style>
+  * { border: 4px solid red; padding: 10px; }
+</style>
+<div class="box">box</div>
+<script>
+  const levels = ['none', 'capturing', 'target', 'bubbling']
+  window.addEventListener('click', e => {
+    console.log('window: ' + levels[e.eventPhase])
+    console.log(e.path)
+  }, false) //false 冒泡； true 捕获
+  document.addEventListener('click', e => {
+    console.log('document: ' + levels[e.eventPhase])
+    e.stopPropagation() //停止事件传递
+  }, true) //false 冒泡； true 捕获
+  document.querySelector('.box').addEventListener('click', e => {
+    console.log('.box: ' + levels[e.eventPhase])
+  }) //默认 冒泡；
+</script> -->
+
+
+
+<!-- <style>
+  * { border: 4px solid red; padding: 10px; }
+</style>
+<div class="box">box</div>
+<script>
+  document.addEventListener('click', function(e) {
+    console.log('in docuemnt')
+    console.log(this)  //document 
+    console.log(e.target) //.box
+  })
+  document.querySelector('.box').addEventListener('click', function(e) {
+    console.log('in .box')
+    console.log(this)  //.box
+    console.log(e.target) //.box
+  }) 
+</script> -->
+
+
+<a href="https://jirengu.com">站内链接:jirengu.com</a>
+<a href="https://baidu.com">站外链接:baidu.com</a>
+<script>
+document.querySelectorAll('a').forEach($a => {
+  $a.addEventListener('click', function(e) {
+    let href = this.getAttribute('href')
+    if(href.includes('baidu.com')) {
+      e.preventDefault()
+      if(confirm('要打开百度搜索吗?')) {
+        location.href = href
+      }
+    } 
+  })
+})
+</script>
+
+</body>
+</html>

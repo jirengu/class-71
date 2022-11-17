@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+
+  <!-- <style>
+    .box {
+      width: 120px;
+      height: 120px;
+      background-color: rgba(245, 188, 90);
+      cursor: pointer;
+    }
+  </style>
+  <div class="box"></div>
+  <script>
+    function rand(n) {
+      return Math.floor(Math.random()*n)
+    }
+    function handle() {
+      this.style.backgroundColor = `rgb(${rand(256)}, ${rand(256)}, ${rand(256)})`
+    }
+    //document.querySelector('.box').addEventListener('click', handle)
+    document.querySelector('.box').addEventListener('click', function(){
+      this.style.backgroundColor = `rgb(${rand(256)}, ${rand(256)}, ${rand(256)})`
+    })
+  </script> -->
+
+
+
+
+
+  <!-- <button>点我</button>
+<div onclick="sayHello()">sayHello</div>
+<script>
+  const $btn = document.querySelector('button')
+  $btn.onclick = function() {
+    console.log(1)
+  }
+  $btn.onclick = function() {
+    console.log(11)
+  }
+  $btn.addEventListener('click', function() {
+    console.log(2)
+  })
+  $btn.addEventListener('click', function() {
+    console.log(22)
+  })
+  function sayHello() {
+    console.log('hello')
+  }
+</script> -->
+
+
+<div class="btn">click me</div>
+<script>
+  // document.querySelector('.btn').onclick = function(event) {
+  //   console.log(event)
+  // }
+
+  // document.querySelector('.btn').addEventListener('click', function(evt) {
+  //   console.log(evt)
+  //   console.log(this === document.querySelector('.btn'))
+  // })
+  console.log(this)
+  document.querySelector('.btn').addEventListener('click', evt => {
+    console.log(evt)
+    console.log(this)
+  })
+</script>
+
+</body>
+</html>

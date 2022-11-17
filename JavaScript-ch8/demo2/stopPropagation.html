@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <style>
+    .detail {
+      position: absolute;
+      background-color: lightcyan;
+      padding: 10px;
+      transform: translateY(-100px);
+      opacity: 0;
+      transition: all .3s;
+    }
+    .detail.show {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  </style>
+<button class="open">打开</button>
+<div class="detail">详细介绍</div>
+<script>
+  const $ = s => document.querySelector(s)
+  $('.open').onclick = (e) => {
+    $('.detail').classList.add('show')
+    e.stopPropagation()
+  }
+  document.onclick = () => {
+    $('.detail').classList.remove('show')
+  }
+  $('.detail').onclick = (e) => {
+    e.stopPropagation()
+  }
+</script>
+</body>
+</html>

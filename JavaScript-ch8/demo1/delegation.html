@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+<style>
+  .del { margin-left: 10px; cursor: pointer; }
+</style>
+<ul class="wrap">
+  <li><span class="text">hello</span><span class="del">x</span></li>
+</ul>
+<footer>
+  <input type="text"> <button class="add">添加</button>
+</footer>
+<script>
+  const $ = s => document.querySelector(s)
+  const $$ = s => document.querySelectorAll(s)
+  $('.add').onclick = function() {
+    const $text = document.createElement('span')
+    $text.classList.add('text')
+    $text.append($('input').value)
+    const $del = document.createElement('span')
+    $del.append('x')
+    $del.classList.add('del')
+    const $li = document.createElement('li')
+    $li.append($text, $del)
+    $('.wrap').append($li)
+    $('input').value = ''
+  }
+  $$('.del').forEach($del => {
+    $del.onclick = function() {
+      this.parentElement.remove()
+    }
+  })
+  
+  $('.wrap').addEventListener('click', e => {
+    let $target = e.path.find(el => el.classList.contains('del'))
+    if($target) {
+      $target.parentElement.remove()
+    }
+  })
+</script>
+</body>
+</html>
